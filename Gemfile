@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.5.1'
 
 gem 'github-pages', '96', group: :jekyll_plugins
-gem 'rake', '10.4.2'
+gem 'rake', '12.3.1'
 gem 'scss_lint', '0.57.0'
 gem 'w3c_validators', '1.1.1'
 gem 'html-proofer', '3.0.6'
