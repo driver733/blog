@@ -15,7 +15,7 @@ require 'html-proofer'
 task default: [
   :clean,
   :build,
- :scss_lint,
+  :scss_lint,
   :pages,
   :garbage,
   :proofer,
