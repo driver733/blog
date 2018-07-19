@@ -10,8 +10,7 @@
 # gem 'rubocop-rspec', '1.27.0'
 
 source 'https://rubygems.org'
-# ruby '2.2.2'
-ruby '2.5.1'
+ruby '2.2.2'
 
 gem 'github-pages', '96', group: :jekyll_plugins
 gem 'rake', '10.4.2'
