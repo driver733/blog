@@ -5,6 +5,7 @@ permalink: /about.html
 description: |
   This page explains what this blog is
   about and gives other information.
+  Testing.
 keywords:
   - demo blog
   - bloghacks
