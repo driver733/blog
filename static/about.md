@@ -19,4 +19,4 @@ Testing.1
 
 Feel free to start blogging by making a copy of this entire
 site. It is made exactly for that.
-X
+XX
