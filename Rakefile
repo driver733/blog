@@ -22,7 +22,7 @@ task default: [
   :spell,
   :ping,
   :orphans,
-  :rubocop
+  # :rubocop
 ]
 
 def done(msg)
