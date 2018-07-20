@@ -2,3 +2,4 @@ Rakefile
 Gemfile
 README.md
 LICENSE.txt
+blog.scss

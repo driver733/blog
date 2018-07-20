@@ -10,7 +10,7 @@ require 'nokogiri'
 require 'rubocop/rake_task'
 require 'English'
 require 'net/http'
-# require 'html-proofer'
+require 'html-proofer'
 
 task default: [
   :clean,
@@ -18,7 +18,7 @@ task default: [
   :scss_lint,
   :pages,
   :garbage,
- # :proofer,
+  :proofer,
   :spell,
   :ping,
   :orphans,
@@ -37,11 +37,13 @@ end
 
 desc 'Lint SASS sources'
 SCSSLint::RakeTask.new do |t|
- f = Tempfile.new(['bloghacks-', '.scss'])
+# f = Tempfile.new(['bloghacks', '.scss'])
+f = File.new("blog.scss", "w")
 f << File.open('css/main.scss').drop(2).join("\n")
 f.flush
-f.close
 t.files = Dir.glob([f.path])
+#File.delete(f) if File.exist?(f)
+f.close
 end
 
 desc 'Build Jekyll site'
@@ -67,6 +69,8 @@ end
 
 desc 'Check the absence of garbage'
 task garbage: [:build] do
+  File.delete("blog.scss") if File.exist?("blog.scss")
+  File.delete("_site/blog.scss") if File.exist?("_site/blog.scss")
   File.open('_rake/garbage.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
     fail "Page #{file} is still there" if File.exist? file
