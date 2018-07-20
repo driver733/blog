@@ -3,3 +3,6 @@ _site
 .DS_Store
 Gemfile.lock
 .jekyll-metadata
+/blog.iml
+.idea/
+blog.iml
