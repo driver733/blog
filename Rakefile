@@ -10,7 +10,7 @@ require 'nokogiri'
 require 'rubocop/rake_task'
 require 'English'
 require 'net/http'
-require 'html-proofer'
+# require 'html-proofer'
 
 task default: [
   :clean,
@@ -18,7 +18,7 @@ task default: [
   :scss_lint,
   :pages,
   :garbage,
-  :proofer,
+ # :proofer,
   :spell,
   :ping,
   :orphans,
