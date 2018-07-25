@@ -1,24 +1,5 @@
 [![Build Status](https://travis-ci.org/driver733/blog.svg?branch=master)](https://travis-ci.org/driver733/blog)
 
-Check us at [bloghacks.yegor256.com](http://bloghacks.yegor256.com).
+Check us at [driver733.com](http://driver733.com).
 
-The "256 Bloghacks" book is [here](http://www.yegor256.com/256-bloghacks.html).
-
-## License
-
-Copyright (c) 2016 Yegor Bugayenko
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the 'Software'), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/driver733/blog/blob/master/LICENSE.txt)
