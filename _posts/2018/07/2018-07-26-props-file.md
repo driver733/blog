@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2016-09-12
-title: "First post"
+date: 2018-07-26
+title: ""
 description: |
   This is the first post in this demo
   blog; it should help you understand
@@ -25,4 +25,4 @@ Source code of this blog is in this
 GitHub repository. Feel
 free to clone it and copy.
 
-The second post is [here]({% post_url 2016-09-13-second %}).
+

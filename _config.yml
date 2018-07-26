@@ -1,18 +1,17 @@
-title: 256 Bloghacks Demo
-email: me@yegor256.com
+title: driver733's blog
+email: yakushin@terpmail.umd.edu
 description: >
-  This site is a static blog for Jekyll and GitHub Pages,
-  a demo for "256 Bloghacks" book by Yegor Bugayenko
+  Personal blog of Mikhail (@driver733) Yakushin about programming.
 baseurl: ""
-url: "http://bloghacks.yegor256.com"
-twitter_username: yegor256
-github_username: yegor256
+url: "http://driver733.com"
+twitter_username: driver733
+github_username: driver733
 markdown: kramdown
 author:
-  name: "Yegor Bugayenko"
-  email: me@yegor256.com
+  name: "Mikhail Yakushin"
+  email: yakushin@terpmail.umd.edu
 encoding: utf-8
-timezone: America/San_Francisco
+timezone: Europe/Moscow
 permalink: :year/:month/:day/:title.html
 exclude:
   - README.md
@@ -31,8 +30,8 @@ paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 
 feed:
-  title: bloghacks.yegor256.com
-  subtitle: 256 Bloghacks Demo
+  title: driver733.com
+  subtitle: driver733's blog
   path: rss.xml
 
 sass:
