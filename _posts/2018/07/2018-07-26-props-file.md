@@ -21,25 +21,25 @@ class before, so while trying to find it he expects code like this...
 
 <!--more-->
 
-{% highlight java %}
+```java
 public interface Props {
     Props with(String key, String value);
     String property(String key);
 }
-{% endhighlight %}
+```
 
 To John's surprise, when he finds out the Oracle's solution to his problem, he sees this:
 
-{% highlight java %}
+```java
 public void load(InputStream out, String comments)
 public void store(OutputStream out, String comments)
-{% endhighlight %}
+```
 
 Nevertheless, he accepts the solution and moves on with his project.
 
 After a couple of months, John's code starts to look like this:
 
-{% highlight java %}
+```java
 Properties props = new Properties();
 ...
 props.setProperty("k1","v1");
@@ -54,7 +54,7 @@ Properties props = new Properties(file1);
 if (!"v1".equals(props.getProperty("k1")) {
     // expection thrown
 }
-{% endhighlight %}
+```
 
 
 He notices that he spends more time on debugging than on anything else.
@@ -77,7 +77,9 @@ the problems introduced by the usage of the Properties class:
 
 At last, John creates an abstraction for the Properties class:
 
-{% highlight java %}
+(using [cactoos](https://github.com/yegor256/cactoos) library)
+
+```java
 public final class PropsFile implements Props {
     public PropsFile(
         final File file
@@ -130,21 +132,22 @@ public final class PropsFile implements Props {
         return this;
     }
 }
-{% endhighlight %}
+```
 
 Now, he is able to use the same Properties in a much
 [cleaner](https://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
 way:
 
-{% highlight java %}
+```java
 final PropsFile props = new PropsFile(file);
 props.with("k1", "v1"); // property added to file.
 new Something(props);
-{% endhighlight %}
+```
 
 The object-oriented abstraction
 [PropsFile](https://github.com/driver733/VKUploader/blob/master/src/main/java/com/driver733/vkuploader/wallpost/PropsFile.java),
 thus, gives the following benefits over the standard Properties class:
+
 
 1. No temporal coupling
    *    Because properties are auto-saved, there is no need to manually update the contents of the file.
