@@ -2,9 +2,9 @@
 ---
 @charset 'utf-8';
 // see https://fonts.google.com/
-@import 'https://fonts.googleapis.com/css?family=Lora';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
-$black: #000;
+$black: #000000;
 
 %gray { color: lighten($black, 50); }
 
@@ -17,8 +17,8 @@ $black: #000;
 * {
   border: 0;
   box-sizing: border-box;
-  font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   margin: 0;
   padding: 0;
 }
@@ -31,7 +31,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  width: 640px;
+  width: 650px;
 }
 
 header {
@@ -94,12 +94,16 @@ footer {
   font-size: .8em;
 }
 
-code {
-  background-color: lighten($black, 90);
-  border-radius: .2em;
-  font-family: monospace;
-  padding: .1em .2em;
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
 }
+
+.hljs-subst {
+  color: black;
+}
+
 
 .disqus {
   margin: 4em 0;
