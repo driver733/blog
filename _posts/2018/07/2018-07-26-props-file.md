@@ -84,7 +84,16 @@ At last, John creates an abstraction for the Properties class:
 
 {% highlight java %}
 public final class PropsFile implements Props {
-    PropsFile(
+    public PropsFile(
+        final File file
+    ) {
+        this(
+            new Constant<>(
+                () -> file
+            )
+        );
+    }
+    private PropsFile(
         final Scalar<Scalar<File>> scalar
     ) {
         this.origin = new UncheckedScalar<>(
