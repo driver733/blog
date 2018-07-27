@@ -4,7 +4,7 @@
 // see https://fonts.google.com/
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
-$black: #000;
+$black: #000000;
 
 %gray { color: lighten($black, 50); }
 
@@ -97,7 +97,7 @@ footer {
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
+  padding: .5em;
 }
 
 .hljs-subst {
