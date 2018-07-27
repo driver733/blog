@@ -23,13 +23,8 @@ class before, so while trying to find it he expects code like this...
 
 {% highlight java %}
 public interface Props {
-    Props with(
-        String key,
-        String value
-    );
-    String property(
-        String key
-    );
+    Props with(String key, String value);
+    String property(String key);
 }
 {% endhighlight %}
 
@@ -144,7 +139,7 @@ way:
 {% highlight java %}
 final PropsFile props = new PropsFile(file);
 props.with("k1", "v1"); // property added to file.
-new Something(props;
+new Something(props);
 {% endhighlight %}
 
 The object-oriented abstraction
