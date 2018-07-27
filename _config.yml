@@ -7,6 +7,10 @@ url: "http://driver733.com"
 twitter_username: driver733
 github_username: driver733
 markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 author:
   name: "Mikhail Yakushin"
   email: yakushin@terpmail.umd.edu
