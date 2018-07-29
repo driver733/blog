@@ -6,5 +6,5 @@ favicon.ico
 rss.xml
 sitemap.xml
 css/main.css
-images/tomato.svg
-2016/09/12/first-post.html
+css/code.css
+2018/07/27/props-file.html

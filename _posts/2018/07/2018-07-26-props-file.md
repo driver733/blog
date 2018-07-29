@@ -16,7 +16,7 @@ comments: true
 
 John is a newcomer to Java and has faced the need to save key-value pairs
 to a file. John has not seen the
-[Properties](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)
+[Properties]
 class before, so while trying to find it he expects code like this...
 
 <!--more-->
@@ -61,23 +61,23 @@ He notices that he spends more time on debugging than on anything else.
 John decides that he cannot continue working on the project, before he resolves
 the problems introduced by the usage of the Properties class:
 
-1. [Temporal coupling](https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html)
+1. [Temporal coupling]
     *   Whenever John changed the order of the lines of code in the methods
         which dealt with properties, something would always brake. He would become
         more and more cautious about changing something, especially legacy code.
 
-2. Lack of [self-sufficiency](https://www.yegor256.com/2017/05/10/inversion-of-control.html)
+2. Lack of [self-sufficiency]
     *   John was not able to integrate the properties objects anywhere, such as in constructors,
         because these objects were not self-sufficient. "Do they know where to save themselves? How to save?
         How can I be sure that the contents of the file to which the properties are saved is up-to-date with object
         content?" These are the questions that John could not answer himself. He decided to use
-        [controllers](https://www.yegor256.com/2016/12/13/mvc-vs-oop.html) for that,
+        [controllers] for that,
         however, at some point John lost control of them, failing to remember all states they can be in.
 
 
 At last, John creates an abstraction for the Properties class:
 
-(using [cactoos](https://github.com/yegor256/cactoos) library)
+(using [yegor256/cactoos] library)
 
 ```java
 public final class PropsFile implements Props {
@@ -135,7 +135,7 @@ public final class PropsFile implements Props {
 ```
 
 Now, he is able to use the same Properties in a much
-[cleaner](https://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
+[cleaner]
 way:
 
 ```java
@@ -145,7 +145,7 @@ new Something(props);
 ```
 
 The object-oriented abstraction
-[PropsFile](https://github.com/driver733/VKUploader/blob/master/src/main/java/com/driver733/vkuploader/wallpost/PropsFile.java),
+[PropsFile],
 thus, gives the following benefits over the standard Properties class:
 
 
@@ -160,3 +160,10 @@ thus, gives the following benefits over the standard Properties class:
         As a result, there is no need for any controllers who would manage the properties as now each properties
         object is self-sufficient and self-manageable.
 
+[cleaner]: https://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html
+[self-sufficiency]: https://www.yegor256.com/2017/05/10/inversion-of-control.html
+[PropsFile]: https://github.com/driver733/VKUploader/blob/master/src/main/java/com/driver733/vkuploader/wallpost/PropsFile.java
+[yegor256/cactoos]: https://github.com/yegor256/cactoos
+[controllers]: https://www.yegor256.com/2016/12/13/mvc-vs-oop.html
+[Properties]: https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html
+[Temporal coupling]: https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html
