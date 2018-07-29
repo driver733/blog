@@ -1,4 +1,4 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
 require 'rubygems'
 require 'rake'
@@ -21,8 +21,9 @@ task default: [
   :proofer,
   :spell,
   :ping,
-  :orphans,
-  # :rubocop
+  # :orphans,
+  # :w3c
+  :rubocop
 ]
 
 def done(msg)
@@ -37,13 +38,13 @@ end
 
 desc 'Lint SASS sources'
 SCSSLint::RakeTask.new do |t|
-# f = Tempfile.new(['bloghacks', '.scss'])
-f = File.new("blog.scss", "w")
-f << File.open('css/main.scss').drop(2).join("\n")
-f.flush
-t.files = Dir.glob([f.path])
-#File.delete(f) if File.exist?(f)
-f.close
+  # f = Tempfile.new(['main', '.scss'])
+  f = File.new('main.scss', 'w')
+  f << File.open('css/main.scss').drop(2).join("\n")
+  f.flush
+  t.files = Dir.glob([f.path])
+  # File.delete(f) if File.exist?(f)
+  f.close
 end
 
 desc 'Build Jekyll site'
@@ -52,7 +53,7 @@ task :build do
     done 'Jekyll site already exists in _site'
   else
     system('jekyll build')
-    fail 'Jekyll failed' unless $CHILD_STATUS.success?
+    raise 'Jekyll failed' unless $CHILD_STATUS.success?
     done 'Jekyll site generated without issues'
   end
 end
@@ -61,7 +62,7 @@ desc 'Check the existence of all critical pages'
 task pages: [:build] do
   File.open('_rake/pages.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
-    fail "Page #{file} is not found" unless File.exist? file
+    raise "Page #{file} is not found" unless File.exist? file
     puts "#{file}: OK"
   end
   done 'All files are in place'
@@ -69,11 +70,11 @@ end
 
 desc 'Check the absence of garbage'
 task garbage: [:build] do
-  File.delete("blog.scss") if File.exist?("blog.scss")
-  File.delete("_site/blog.scss") if File.exist?("_site/blog.scss")
+  File.delete('main.scss') if File.exist?('main.scss')
+  File.delete('_site/main.scss') if File.exist?('_site/main.scss')
   File.open('_rake/garbage.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
-    fail "Page #{file} is still there" if File.exist? file
+    raise "Page #{file} is still there" if File.exist? file
     puts "#{file}: absent, OK"
   end
   done 'There is no garbage'
@@ -90,11 +91,11 @@ task w3c: [:build] do
   ].each do |p|
     file = "_site/#{p}"
     results = validator.validate_file(file)
-    if results.errors.length > 0
+    unless results.errors.empty?
       results.errors.each do |err|
         puts err.to_s
       end
-      fail "Page #{file} is not W3C compliant"
+      raise "Page #{file} is not W3C compliant"
     end
     puts "#{p}: OK"
   end
@@ -129,7 +130,7 @@ task spell: [:build] do
     stdout = `cat "#{tmp.path}" \
       | aspell -a --lang=en_US -W 2 --ignore-case -p ./_rake/aspell.en.pws \
       | grep ^\\&`
-    fail "Typos at #{f}:\n#{stdout}" unless stdout.empty?
+    raise "Typos at #{f}:\n#{stdout}" unless stdout.empty?
     puts "#{f}: OK (#{text.split(/\s/).size} words)"
   end
   done 'No spelling errors'
@@ -147,7 +148,7 @@ task ping: [:build] do
     http.use_ssl = true if uri.port == 443
     data = http.head(uri.request_uri)
     puts "#{uri}: #{data.code}"
-    fail "URI #{uri} is not OK" unless data.code == '200'
+    raise "URI #{uri} is not OK" unless data.code == '200'
   end
   done 'All links are valid'
 end
@@ -158,14 +159,14 @@ task orphans: [:build] do
     array + Nokogiri::HTML(File.read(f)).xpath('//a/@href').to_a.map(&:to_s)
   end
   links = links
-    .map { |a| a.gsub(/^\//, 'http://bloghacks.yegor256.com/') }
-    .reject { |a| !a.start_with? 'http://bloghacks.yegor256.com/' }
-    .map { |a| a.gsub(/#.*/, '') }
+          .map { |a| a.gsub(%r {/^\//} % r, 'http://driver733.com/') }
+          .select { |a| a.start_with? 'http://driver733.com/' }
+          .map { |a| a.gsub(/#.*/, '') }
   links += Dir['_site/**/*.html']
-    .map { |f| f.gsub(/_site/, 'http://bloghacks.yegor256.com') }
+           .map { |f| f.gsub(/_site/, 'http://driver733.com') }
   counts = {}
   links
-    .reject { |a| !a.match %r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*} }
+    .select { |a| a.match %r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*} }
     .group_by(&:itself).each { |k, v| counts[k] = v.length }
   orphans = 0
   counts.each do |k, v|
@@ -176,7 +177,7 @@ task orphans: [:build] do
       puts "#{k}: #{v}"
     end
   end
-  fail "There are #{orphans} orphans" unless orphans == 0
+  raise "There are #{orphans} orphans" unless orphans.zero?
   done "There are no orphans in #{links.size} links"
 end
 
