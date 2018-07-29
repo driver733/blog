@@ -12,5 +12,5 @@ keywords:
 ---
 
 Hello!
-My name is Mikhail Yakuhsin. I am a software developer. I write primarily in Java, but I am also familiar with Swift.
+My name is Mikhail Yakushin. I am a software developer. I write primarily in Java, but I am also familiar with Swift.
 My main focus is OOP programming.
