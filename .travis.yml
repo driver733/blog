@@ -1,11 +1,7 @@
-# More about this file: https://docs.travis-ci.com/user/customizing-the-build
-
 language: ruby
 sudo: false
 rvm:
-#  - 2.2.2
    - 2.3.3
-#   - 2.5.1
 cache: bundler
 branches:
   only:
@@ -19,4 +15,3 @@ install:
   - travis_retry bundle install
 script:
   - rake
-
