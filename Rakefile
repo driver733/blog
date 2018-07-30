@@ -11,6 +11,7 @@ require 'rubocop/rake_task'
 require 'English'
 require 'net/http'
 require 'html-proofer'
+require 'mdl'
 
 task default: [
   :clean,
@@ -22,8 +23,9 @@ task default: [
   :spell,
   :ping,
   # :orphans,
+  :rubocop,
+  :markdownlint,
   # :w3c
-  :rubocop
 ]
 
 def done(msg)
@@ -84,10 +86,10 @@ desc 'Validate a few pages for W3C compliance'
 # It doesn't work now, because of: https://github.com/alexdunae/w3c_validators/issues/16
 task w3c: [:build] do
   include W3CValidators
-  validator = MarkupValidator.new
+  validator = NuValidator.new
   [
     'index.html',
-    '2016/09/12/first-post.html'
+    '2018/07/27/props-file.html'
   ].each do |p|
     file = "_site/#{p}"
     results = validator.validate_file(file)
@@ -159,7 +161,7 @@ task orphans: [:build] do
     array + Nokogiri::HTML(File.read(f)).xpath('//a/@href').to_a.map(&:to_s)
   end
   links = links
-          .map { |a| a.gsub(%r {/^\//} % r, 'http://driver733.com/') }
+          .map { |a| a.gsub(%r{/^\//}, 'http://driver733.com/') }
           .select { |a| a.start_with? 'http://driver733.com/' }
           .map { |a| a.gsub(/#.*/, '') }
   links += Dir['_site/**/*.html']
@@ -185,4 +187,10 @@ desc 'Run RuboCop on all Ruby files'
 RuboCop::RakeTask.new do |t|
   t.fail_on_error = true
   t.requires << 'rubocop-rspec'
+end
+
+desc 'Markdown lint tool'
+task :markdownlint do
+  style = "#{__dir__}/style"
+  sh "bundle exec mdl _posts --style #{style}"
 end

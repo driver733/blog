@@ -24,10 +24,14 @@ exclude:
   - Rakefile
   - LICENSE.txt
 
-gems:
+plugins:
   - jekyll-feed
+  - jekyll-bits
   - jekyll-paginate
+  - jekyll-plantuml
   - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-related-posts
 
 paginate: 8
 paginate_path: "p/:num"

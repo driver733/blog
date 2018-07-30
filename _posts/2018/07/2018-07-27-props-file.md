@@ -7,9 +7,11 @@ description: |
   What consequences do they have?
   How object-oriented design helps to resolve them?
 keywords:
-  - properties
-  - jdk
-  - eo
+
+- properties
+- jdk
+- eo
+
 categories: mood
 comments: true
 ---
@@ -28,7 +30,8 @@ public interface Props {
 }
 ```
 
-To John's surprise, when he finds out the Oracle's solution to his problem, he sees this:
+To John's surprise, when he finds out the Oracle's solution
+to his problem, he sees this:
 
 ```java
 public void load(InputStream out, String comments)
@@ -56,24 +59,26 @@ if (!"v1".equals(props.getProperty("k1")) {
 }
 ```
 
-
 He notices that he spends more time on debugging than on anything else.
 John decides that he cannot continue working on the project, before he resolves
 the problems introduced by the usage of the Properties class:
 
 1. [Temporal coupling]
-    *   Whenever John changed the order of the lines of code in the methods
-        which dealt with properties, something would always brake. He would become
-        more and more cautious about changing something, especially legacy code.
+- Whenever John changed the order of the lines of code in the methods
+    which dealt with properties, something would always brake. He would become
+    more and more cautious about changing something, especially legacy code.
 
 2. Lack of [self-sufficiency]
-    *   John was not able to integrate the properties objects anywhere, such as in constructors,
-        because these objects were not self-sufficient. "Do they know where to save themselves? How to save?
-        How can I be sure that the contents of the file to which the properties are saved is up-to-date with object
-        content?" These are the questions that John could not answer himself. He decided to use
-        [controllers] for that,
-        however, at some point John lost control of them, failing to remember all states they can be in.
-
+- John was not able to integrate the properties objects anywhere,
+      such as in constructors,
+      because these objects were not self-sufficient.
+      "Do they know where to save themselves? How to save?
+      How can I be sure that the contents of the file
+      to which the properties are saved is up-to-date with object
+      content?" These are the questions that John could not answer himself.
+      He decided to use [controllers] for that,
+      however, at some point John lost control of them,
+      failing to remember all states they can be in.
 
 At last, John creates an abstraction for the Properties class:
 
@@ -148,17 +153,23 @@ The object-oriented abstraction
 [PropsFile],
 thus, gives the following benefits over the standard Properties class:
 
-
 1. No temporal coupling
-   *    Because properties are auto-saved, there is no need to manually update the contents of the file.
-        Also, the properties are auto-loaded meaning that the manual call of the `load()` is also not needed.
+- Because properties are auto-saved,
+     there is no need to manually update the contents of the file.
+     Also, the properties are auto-loaded meaning that the manual
+     call of the `load()` is also not needed.
+
 2. Destination file initial state abstraction
-   *    John does not care whether the destination file exists initially or not. He wants to save the properties.
-        And the interface does that for him, creating an empty file if it missing.
+- John does not care whether the destination file exists initially or not.
+     He wants to save the properties. And the interface does that for him,
+     creating an empty file if it missing.
+
 3. Self-sufficiency over third-party control
-   *    After the PropsFile object is created, it can be used by anyone, without any unintended consequences.
-        As a result, there is no need for any controllers who would manage the properties as now each properties
-        object is self-sufficient and self-manageable.
+- After the PropsFile object is created, it can be used by anyone,
+     without any unintended consequences.
+     As a result, there is no need for any controllers who would manage
+     the properties as now each properties
+     object is self-sufficient and self-manageable.
 
 [cleaner]: https://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html
 [self-sufficiency]: https://www.yegor256.com/2017/05/10/inversion-of-control.html
