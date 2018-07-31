@@ -25,7 +25,7 @@ task default: [
   # :orphans,
   :rubocop,
   :markdownlint,
-  # :w3c
+  :w3c
 ]
 
 def done(msg)
