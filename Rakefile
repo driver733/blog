@@ -56,6 +56,7 @@ task :build do
   else
     system('jekyll build')
     raise 'Jekyll failed' unless $CHILD_STATUS.success?
+
     done 'Jekyll site generated without issues'
   end
 end
@@ -65,6 +66,7 @@ task pages: [:build] do
   File.open('_rake/pages.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
     raise "Page #{file} is not found" unless File.exist? file
+
     puts "#{file}: OK"
   end
   done 'All files are in place'
@@ -77,6 +79,7 @@ task garbage: [:build] do
   File.open('_rake/garbage.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
     raise "Page #{file} is still there" if File.exist? file
+
     puts "#{file}: absent, OK"
   end
   done 'There is no garbage'
@@ -98,6 +101,7 @@ task w3c: [:build] do
         puts err.to_s
       end
       raise "Page #{file} is not W3C compliant"
+
     end
     puts "#{p}: OK"
   end
@@ -133,6 +137,7 @@ task spell: [:build] do
       | aspell -a --lang=en_US -W 2 --ignore-case -p ./_rake/aspell.en.pws \
       | grep ^\\&`
     raise "Typos at #{f}:\n#{stdout}" unless stdout.empty?
+
     puts "#{f}: OK (#{text.split(/\s/).size} words)"
   end
   done 'No spelling errors'
@@ -180,6 +185,7 @@ task orphans: [:build] do
     end
   end
   raise "There are #{orphans} orphans" unless orphans.zero?
+
   done "There are no orphans in #{links.size} links"
 end
 
