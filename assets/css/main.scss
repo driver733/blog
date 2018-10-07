@@ -64,18 +64,19 @@ header {
 }
 
 img {
-  margin-top: 2em;
-  margin-bottom: 0.5em;
   display: block;
-  width: $width;
   height: auto;
+  margin-bottom: .5em;
+  margin-top: 2em;
   max-height: 400px;
   position: center;
+  width: $width;
 }
 
+// scss-lint:disable MergeableSelector
 img + em {
-  margin-bottom: 2em;
   display: block;
+  margin-bottom: 2em;
   text-align: left;
 }
 
@@ -83,9 +84,9 @@ article {
   margin: 4em 0;
 
   h1 {
-    margin-bottom: 2em;
     font-size: 1.8em;
     font-weight: bold;
+    margin-bottom: 2em;
   }
 
   h2 {

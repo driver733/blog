@@ -5,6 +5,6 @@ about.html
 favicon.ico
 rss.xml
 sitemap.xml
-css/main.css
-css/code.css
+assets/css/main.css
+assets/css/code.css
 2018/07/27/props-file.html

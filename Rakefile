@@ -42,7 +42,7 @@ desc 'Lint SASS sources'
 SCSSLint::RakeTask.new do |t|
   # f = Tempfile.new(['main', '.scss'])
   f = File.new('main.scss', 'w')
-  f << File.open('css/main.scss').drop(2).join("\n")
+  f << File.open('assets/css/main.scss').drop(2).join("\n")
   f.flush
   t.files = Dir.glob([f.path])
   # File.delete(f) if File.exist?(f)
