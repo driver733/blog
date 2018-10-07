@@ -17,32 +17,40 @@ comments: true
 ---
 
 John is a newcomer to Java and has faced the need to save key-value pairs
-to a file. John has not seen the
-[Properties]
+to a file. John has not seen the [Properties]
 class before, so while trying to find it he expects code like this...
 
 <!--more-->
 
 ```java
+
 public interface Props {
     Props with(String key, String value);
     String property(String key);
 }
+
 ```
 
 To John's surprise, when he finds out the Oracle's solution
 to his problem, he sees this:
 
 ```java
+
 public void load(InputStream out, String comments)
 public void store(OutputStream out, String comments)
+
 ```
 
 Nevertheless, he accepts the solution and moves on with his project.
 
+![](/assets/images/posts/2018/07/props-file/old-ibm-computer.jpg)
+*© National Museum of Computing*
+
+
 After a couple of months, John's code starts to look like this:
 
 ```java
+
 Properties props = new Properties();
 ...
 props.setProperty("k1","v1");
@@ -57,6 +65,7 @@ Properties props = new Properties(file1);
 if (!"v1".equals(props.getProperty("k1")) {
     // expection thrown
 }
+
 ```
 
 He notices that he spends more time on debugging than on anything else.
@@ -85,6 +94,7 @@ At last, John creates an abstraction for the Properties class:
 (using [yegor256/cactoos] library)
 
 ```java
+
 public final class PropsFile implements Props {
     public PropsFile(
         final File file
@@ -137,6 +147,7 @@ public final class PropsFile implements Props {
         return this;
     }
 }
+
 ```
 
 Now, he is able to use the same Properties in a much
@@ -144,9 +155,11 @@ Now, he is able to use the same Properties in a much
 way:
 
 ```java
+
 final PropsFile props = new PropsFile(file);
 props.with("k1", "v1"); // property added to file.
 new Something(props);
+
 ```
 
 The object-oriented abstraction

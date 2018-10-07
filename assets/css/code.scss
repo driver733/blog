@@ -2,11 +2,20 @@
 ---
 
 .highlighter-rouge {
-  background-color: rgba(210, 210, 210, 1.0);
+
+  //background-color: rgba(210, 210, 210, 1.0);
 }
 
-.highlight table td { padding: 5px; }
+.highlight table td {
+  padding: 5px;
+}
 .highlight table pre { margin: 0; }
+.highlight {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+  background-color: #dedfe2;
+}
 .highlight .cm {
   color: #999988;
   font-style: italic;
@@ -211,6 +220,4 @@
 .highlight .w {
   color: #bbbbbb;
 }
-.highlight {
-  background-color: #f8f8f8;
-}
+
