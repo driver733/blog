@@ -5,10 +5,13 @@
 // see https://fonts.google.com/
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
+// scss-lint:disable MergeableSelector
+
 $black: #000;
 
 $width: 650px;
-$height: 100px;
+$blockquote-background-color: f9f9f9;
+$blockquote-border-color: f9f9f9;
 
 %gray { color: lighten($black, 50); }
 
@@ -32,10 +35,11 @@ body {
 }
 
 section {
+  height: auto;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
-  width: $width;
+  max-width: $width;
+  width: auto;
 }
 
 header {
@@ -63,17 +67,25 @@ header {
   }
 }
 
+blockquote {
+  background: $blockquote-background-color;
+  border-left: 10px solid $blockquote-border-color;
+  margin: 1.5em 10px;
+  padding: .5em 10px;
+}
+blockquote p {
+  display: inline;
+}
+
 img {
   display: block;
   height: auto;
   margin-bottom: .5em;
   margin-top: 2em;
-  max-height: 400px;
   position: center;
-  width: $width;
+  width: 100%;
 }
 
-// scss-lint:disable MergeableSelector
 img + em {
   display: block;
   margin-bottom: 2em;
@@ -86,7 +98,7 @@ article {
   h1 {
     font-size: 1.8em;
     font-weight: bold;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   h2 {

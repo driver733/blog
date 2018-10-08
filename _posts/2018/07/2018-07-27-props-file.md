@@ -12,7 +12,7 @@ keywords:
 - jdk
 - eo
 
-categories: mood
+categories: oop
 comments: true
 ---
 
@@ -184,10 +184,10 @@ thus, gives the following benefits over the standard Properties class:
      the properties as now each properties
      object is self-sufficient and self-manageable.
 
-[cleaner]: https://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html
-[self-sufficiency]: https://www.yegor256.com/2017/05/10/inversion-of-control.html
-[PropsFile]: https://github.com/driver733/VK-Uploader/blob/master/src/main/java/com/driver733/vkuploader/wallpost/PropsFile.java
-[yegor256/cactoos]: https://github.com/yegor256/cactoos
-[controllers]: https://www.yegor256.com/2016/12/13/mvc-vs-oop.html
-[Properties]: https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html
-[Temporal coupling]: https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html
+[cleaner]:              https://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html
+[self-sufficiency]:     https://www.yegor256.com/2017/05/10/inversion-of-control.html
+[PropsFile]:            https://github.com/driver733/VK-Uploader/blob/master/src/main/java/com/driver733/vkuploader/wallpost/PropsFile.java
+[yegor256/cactoos]:     https://github.com/yegor256/cactoos
+[controllers]:          https://www.yegor256.com/2016/12/13/mvc-vs-oop.html
+[Properties]:           https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html
+[Temporal coupling]:    https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html

@@ -5,4 +5,4 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/driver733/blog/blob/master/LICENSE.txt)
 
-Check us at [driver733.com](http://driver733.com).
+Check us at [https://www.driver733.com](https://www.driver733.com).
