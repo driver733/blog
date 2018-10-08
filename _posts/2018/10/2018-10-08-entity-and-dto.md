@@ -105,6 +105,10 @@ public interface Car {
     void race();
 }
 
+public interface Scalar<T> {
+    T value();
+}
+
 ```
 
 ```java
@@ -132,7 +136,7 @@ public class CarBasic implements Car {
 
 ```java
 
-public class CarDb implements Car {
+public class CarDb implements Scalar<Car> {
 
   private int id;
   private String table;
@@ -164,7 +168,7 @@ public class CarDb implements Car {
 
 ```
 
-Do you the difference? Now our object is all about *responsibility* and *action*.
+Do you see the difference? Now our object is all about *responsibility* and *action*.
 When we are dealing with a `Car`, the only moment we care about data is when we create
 the object. After that, the data is used by the object internally for the action
 that the object is responsible for.
