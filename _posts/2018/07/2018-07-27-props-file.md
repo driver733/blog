@@ -150,9 +150,7 @@ public final class PropsFile implements Props {
 
 ```
 
-Now, he is able to use the same Properties in a much
-[cleaner]
-way:
+Now, he is able to use the same Properties in a much [cleaner] way:
 
 ```java
 
@@ -162,8 +160,7 @@ new Something(props);
 
 ```
 
-The object-oriented abstraction
-[PropsFile],
+The object-oriented abstraction [PropsFile],
 thus, gives the following benefits over the standard Properties class:
 
 1. No temporal coupling
@@ -180,7 +177,7 @@ thus, gives the following benefits over the standard Properties class:
 3. Self-sufficiency over third-party control
 - After the PropsFile object is created, it can be used by anyone,
      without any unintended consequences.
-     As a result, there is no need for any controllers who would manage
+     As a result, there is no need for any controllers who would [manage]
      the properties as now each properties
      object is self-sufficient and self-manageable.
 
@@ -191,3 +188,4 @@ thus, gives the following benefits over the standard Properties class:
 [controllers]:          https://www.yegor256.com/2016/12/13/mvc-vs-oop.html
 [Properties]:           https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html
 [Temporal coupling]:    https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html
+[manage]:               https://www.driver733.com/2018/10/08/entity-and-dto.html
