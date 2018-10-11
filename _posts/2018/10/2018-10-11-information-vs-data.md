@@ -72,13 +72,13 @@ which would provide us this *information*.
 
 ```java
 
-public final class LastOperator implements Scalar<Boolean> {
+public final class IsLastOperatorOnline implements Scalar<Boolean> {
 
     private final long user;
 
     private final Scalar<DataSource> database;
 
-    public LastOperator(final Scalar<DataSource> database, final long user) {
+    public IsLastOperatorOnline(final Scalar<DataSource> database, final long user) {
         this.user = user;
         this.database = database;
     }
