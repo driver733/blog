@@ -1,1 +1,1 @@
-sitemap: http://driver733.com/sitemap.xml
+sitemap: https://driver733.com/sitemap.xml

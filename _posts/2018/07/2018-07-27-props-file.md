@@ -7,7 +7,6 @@ description: |
   What consequences do they have?
   How object-oriented design helps to resolve them?
 keywords:
-
 - properties
 - jdk
 - eo
