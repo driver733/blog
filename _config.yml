@@ -1,9 +1,8 @@
-title: driver733's blog
+title: Mikhail (@driver733) Yakushin's blog
 email: yakushin@terpmail.umd.edu
-description: >
-  Personal blog of Mikhail (@driver733) Yakushin about programming.
+description: Personal blog of Mikhail (@driver733) Yakushin about programming.
 baseurl: ""
-url: "http://driver733.com"
+url: "https://www.driver733.com"
 twitter_username: driver733
 github_username: driver733
 markdown: kramdown
@@ -38,8 +37,8 @@ paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 
 feed:
-  title: driver733.com
-  subtitle: driver733's blog
+  title: Mikhail (@driver733) Yakushin's blog
+  subtitle: My personal blog about programming
   path: rss.xml
 
 sass:

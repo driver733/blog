@@ -4,7 +4,7 @@ date: 2018-10-11
 title: "Information vs Data in OOP"
 description: |
   What is data and what is information?
-  What is the difference between them?
+  What is the difference between them in programming?
   How can these concepts be applied in OOP?
 keywords:
 - oop
