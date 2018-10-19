@@ -22,7 +22,7 @@ task default: [
   # :proofer,
   # :spell,
   :ping,
-  # :orphans,
+  :orphans,
   :rubocop,
   :markdownlint,
   :w3c
@@ -155,7 +155,11 @@ task ping: [:build] do
     http.use_ssl = true if uri.port == 443
     data = http.head(uri.request_uri)
     puts "#{uri}: #{data.code}"
-    raise "URI #{uri} is not OK" unless data.code == '200'
+    raise "URI #{uri} is not OK" unless
+        data.code == '200' ||
+        data.code == '301' ||
+        data.code == '302' ||
+        data.code == '418'
   end
   done 'All links are valid'
 end
@@ -166,18 +170,18 @@ task orphans: [:build] do
     array + Nokogiri::HTML(File.read(f)).xpath('//a/@href').to_a.map(&:to_s)
   end
   links = links
-          .map { |a| a.gsub(%r{/^\//}, 'http://driver733.com/') }
-          .select { |a| a.start_with? 'http://driver733.com/' }
+          .map { |a| a.gsub(%r{/^\//}, 'https://www.driver733.com/') }
+          .select { |a| a.start_with? 'https://www.driver733.com/' }
           .map { |a| a.gsub(/#.*/, '') }
   links += Dir['_site/**/*.html']
-           .map { |f| f.gsub(/_site/, 'http://driver733.com') }
+           .map { |f| f.gsub(/_site/, 'https://www.driver733.com') }
   counts = {}
   links
     .select { |a| a.match %r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*} }
     .group_by(&:itself).each { |k, v| counts[k] = v.length }
   orphans = 0
   counts.each do |k, v|
-    if v < 3
+    if v < 2
       puts "#{k} is an orphan (#{v})"
       orphans += 1
     else

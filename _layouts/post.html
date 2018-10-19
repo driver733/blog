@@ -29,7 +29,45 @@ layout: default
   <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
   {{ content }}
 </article>
+<div class="share-buttons">
 
+  <!-- Twitter -->
+  <a href="https://twitter.com/share?url={{site.url}}{{page.url}}&amp;text={{ page.title | url_encode }}%0A{{ page.description | url_encode }}"
+     target="_blank" title="Twitter">
+    <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+  </a>
+
+  <!-- Facebook -->
+  <a href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}"
+     target="_blank" title="Facebook">
+    <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+  </a>
+
+   <!--Reddit -->
+  <a href="http://reddit.com/submit?url={{site.url}}{{page.url}}&amp;title={{ page.title | url_encode }}"
+     target="_blank" title="Reddit">
+    <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+  </a>
+
+   <!--LinkedIn -->
+  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{page.url}}"
+     target="_blank" title="LinkedIn">
+    <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+  </a>
+
+   <!--VK -->
+  <a href="http://vk.com/share.php?url={{site.url}}{{page.url}}"
+     target="_blank" title="VK">
+    <img src="https://simplesharebuttons.com/images/somacro/vk.png" alt="VK" />
+  </a>
+
+   <!--Email-->
+  <a href="mailto:?Subject={{ page.title | url_encode }}&amp;Body={{ page.title | url_encode }}%20{{ page.description | url_encode }}%0A{{site.url}}{{page.url}}"
+     title="Email">
+    <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+  </a>
+
+</div>
 <div class="disqus" id="disqus_thread"></div>
 <script>
 var disqus_config = function () {

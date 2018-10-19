@@ -30,7 +30,7 @@ show how the former can become a viable alternative to the latter.
 *© Mac vs PC. Apple.*
 
 I will start with a common data retrieval example, which I have found on another [blog].
-Suppose your java application receives key-value information in JSON format. In order to
+Suppose your java application receives key-value [information] in JSON format. In order to
 process it, you decide to use a common approach - DTO.
 
 
@@ -119,7 +119,11 @@ public class CarBasic implements Car {
     private final int hp;
     private final String model;
 
-    public CarBasic(final String mark, final int hp, final String model) {
+    public CarBasic(
+      final String mark,
+      final int hp,
+      final String model
+    ) {
       this.mark = mark;
       this.hp = hp;
       this.model = model;
@@ -142,7 +146,11 @@ public class CarDb implements Scalar<Car> {
   private String table;
   private DataSource database;
 
-  public DbCar(final int id, final String table, final DataSource database) {
+  public DbCar(
+    final int id,
+    final String table,
+    final DataSource database
+  ) {
     this.id = id;
     this.table = table;
     this.database = database;
@@ -181,6 +189,7 @@ and think what you are going to write will end up with something that can race o
 instance of the [Map] interface.
 
 
+[information]:              https://www.driver733.com/2018/10/11/information-vs-data.html
 [Data Transfer Object]:     https://martinfowler.com/eaaCatalog/dataTransferObject.html
 [discussions]:              https://www.yegor256.com/2016/07/06/data-transfer-object.html
 [entity]:                   https://www.yegor256.com/2016/07/14/who-is-object.html

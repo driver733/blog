@@ -5,7 +5,20 @@ layout: compress
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
   itemscope="" itemtype="http://schema.org/WebPage">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127781126-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-127781126-1');
+    </script>
     <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <link rel="stylesheet" href="/assets/css/code.css"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
     <meta name="description" content="{{ page.description }}" />
     <meta name="keywords" content="{{ page.keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
@@ -18,34 +31,40 @@ layout: compress
     <meta name="twitter:title" property="og:title" content="{{ page.title }}"/>
     <meta name="twitter:description" property="og:description" content="{{ page.description }}"/>
     <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}"/>
-    <link rel="shortcut icon" href="/favicon.ico"/>
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/main.css"/>
-    <link rel="stylesheet" href="/assets/css/code.css"/>
   </head>
   <body>
     <section>
       <header>
-        <a href="/about.html">
+        <!--<a href="/about.html">-->
           <!--<img src="/images/tomato.svg" class="photo" alt="tomato" itemprop="image"/>-->
-        </a>
-        <nav>
+        <!--</a>-->
+        <nav class="header-top">
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about.html">About</a></li>
           </ul>
         </nav>
-        <nav>
+        <nav class="header-middle">
           <ul>
-            <li><a href="https://twitter.com/driver733">Twitter</a></li>
-            <li><a href="{{ "/rss.xml" | prepend: site.baseurl }}">RSS</a></li>
-            <li><a href="mailto:yakushin@terpmail.umd.edu">yakushin@terpmail.umd.edu</a></li>
+            <li><a class="social fab fa-twitter notranslate" title="Follow me on Twitter" href="https://twitter.com/driver733"></a></li>
+            <li><a class="social fab fa-github  notranslate" title="My GitHub profile" href="https://github.com/driver733"></a></li>
+            <li><a class="social fab fa-stack-overflow notranslate" title="My StackOverflow profile" href="https://stackoverflow.com/users/2441104/driver733"></a></li>
+            <li><a class="social fas fa-rss notranslate" title="Subscribe to my RSS feed" href="{{ "/rss.xml" | prepend: site.baseurl }}"></a></li>
+            <li><a class="social fas fa-envelope notranslate" title="Email me" href="mailto:yakushin@terpmail.umd.edu"></a></li>
           </ul>
         </nav>
-        <form method="get" action="https://www.google.com/search">
-          <input name="sitesearch" value="https://www.driver733.com" type="hidden"/>
-          <input type="text" name="q" placeholder="Search" autocomplete="off" size="30"/>
-        </form>
+        <nav class="header-bottom">
+          <div class="search">
+            <form method="get" action="https://www.google.com/search"
+                  itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+              <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
+              <input name="sitesearch" value="driver733.com" type="hidden"/>
+              <input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required"
+                     name="q" placeholder="Search..." autocomplete="off"/>
+            </form>
+        </div>
+      </nav>
       </header>
       {{ content }}
       <footer>
@@ -57,13 +76,5 @@ layout: compress
         2018
       </footer>
     </section>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-1963507-32', 'auto');
-      ga('send', 'pageview');
-    </script>
   </body>
 </html>

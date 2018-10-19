@@ -78,7 +78,10 @@ public final class IsLastOperatorOnline implements Scalar<Boolean> {
 
     private final Scalar<DataSource> database;
 
-    public IsLastOperatorOnline(final Scalar<DataSource> database, final long user) {
+    public IsLastOperatorOnline(
+        final Scalar<DataSource> database,
+        final long user
+    ) {
         this.user = user;
         this.database = database;
     }

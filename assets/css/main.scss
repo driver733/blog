@@ -21,6 +21,14 @@ $blockquote-border-color: f9f9f9;
 
 .center { @extend %center; }
 
+%desktop-only {
+  @media all and (max-width: $width) {
+    display: none;
+  }
+}
+
+.desktop-only { @extend %desktop-only; }
+
 * {
   border: 0;
   box-sizing: border-box;
@@ -43,6 +51,7 @@ section {
 }
 
 header {
+
   @extend %center;
 
   input {
@@ -65,7 +74,45 @@ header {
     display: inline;
     margin-right: .4em;
   }
+
+  .social {
+    font-size: 1.5em;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+
+  .header-top {
+    margin-bottom: 1.5em;
+  }
+
+  .header-middle {
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+  }
+
+  .header-bottom {
+    margin-top: 2em;
+  }
+
+  .field {
+    border-radius: 5px;
+  }
+
 }
+
+.share-buttons {
+  margin-left: -5px;
+}
+
+.share-buttons img {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: .5em;
+  vertical-align: middle;
+  width: 40px;
+}
+
 
 blockquote {
   background: $blockquote-background-color;
@@ -73,6 +120,7 @@ blockquote {
   margin: 1.5em 10px;
   padding: .5em 10px;
 }
+
 blockquote p {
   display: inline;
 }
@@ -93,12 +141,18 @@ img + em {
 }
 
 article {
-  margin: 4em 0;
+  margin-top: 2em;
 
   h1 {
     font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 1em;
+    margin-top: .5em;
+
+    a {
+      color: $black;
+      font-size: 1em;
+    }
   }
 
   h2 {
@@ -126,5 +180,5 @@ footer {
 }
 
 .disqus {
-  margin: 4em 0;
+  margin-top: 1em;
 }
