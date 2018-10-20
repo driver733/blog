@@ -2,7 +2,8 @@
 layout: post
 date: 2018-07-27
 title: "From procedures to objects - A practical example using JDK Properties"
-image: /assets/images/posts/2018/07/props-file/old-ibm-computer.jpg
+figure: /assets/images/posts/2018/07/props-file/old-ibm-computer.jpg
+figcaption: © National Museum of Computing
 description: |
   What are the drawbacks of JDK Properties?
   What consequences do they have?
@@ -17,10 +18,11 @@ comments: true
 ---
 
 John is a newcomer to Java and has faced the need to save key-value pairs
-to a file. John has not seen the [Properties]
-class before, so while trying to find it he expects code like this...
+to a file. John reaches stackoverflow for help and find the JDK [Properties] class...
 
 <!--more-->
+
+John has not seen it before, so as he opens it, he expects to see code like this.
 
 ```java
 
@@ -43,8 +45,6 @@ public void store(OutputStream out, String comments)
 
 Nevertheless, he accepts the solution and moves on with his project.
 
-![]({{ page.image }})
-*© National Museum of Computing*
 
 
 After a couple of months, John's code starts to look like this:

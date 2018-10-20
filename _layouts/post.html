@@ -27,7 +27,12 @@ layout: default
     </time>
   </p>
   <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
-  {{ content }}
+  {{ page.excerpt }}
+  <figure>
+    <img src="{{ page.figure }}" width="650" height="325">
+    <figcaption>{{ page.figcaption }}</figcaption>
+  </figure>
+  {{ content | remove: page.excerpt }}
 </article>
 <div class="share-buttons">
 
@@ -99,7 +104,6 @@ layout: default
   </a>
 
 </div>
-
 <div class="disqus" id="disqus_thread"></div>
 <script>
 var disqus_config = function () {

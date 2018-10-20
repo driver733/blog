@@ -10,7 +10,7 @@ keywords:
 ---
 
 {% for post in paginator.posts %}
-  <article>
+  <article class="article-preview">
     {{ post.date | date: "%B %-d, %Y" }}
     <h1>
       <a href="{{ site.baseurl }}{{ post.url }}">
@@ -18,6 +18,10 @@ keywords:
       </a>
     </h1>
     {{ post.excerpt }}
+    <figure>
+      <img src="{{ post.figure }}">
+      <figcaption>{{ post.figcaption }}</figcaption>
+    </figure>
     <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-outline-info btn-read" role="button">
       Read <span class="fas fa-long-arrow-alt-right"></span>
     </a>

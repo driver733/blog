@@ -2,7 +2,8 @@
 layout: post
 date: 2018-10-08
 title: "Entity and DTO: What's the difference?"
-image: /assets/images/posts/2018/10/entity-vs-dto/mac-vs-pc.jpg
+figure: /assets/images/posts/2018/10/entity-vs-dto/mac-vs-pc.jpg
+figcaption: © Mac vs PC. Apple.
 description: |
   What is an entity? What is a DTO?
   What is the actual difference between them?
@@ -26,9 +27,6 @@ still remains open.
 
 In this article I will compare and contrast entity and DTO using practical examples and will also
 show how the former can become a viable alternative to the latter.
-
-![]({{ page.image }})
-*© Mac vs PC. Apple.*
 
 I will start with a common data retrieval example, which I have found on another [blog].
 Suppose your java application receives key-value [information] in JSON format. In order to
