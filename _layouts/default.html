@@ -19,14 +19,21 @@ layout: compress
     <link rel="stylesheet" href="/assets/css/main.css"/>
     <link rel="stylesheet" href="/assets/css/code.css"/>
     <link rel="shortcut icon" href="/favicon.ico"/>
-    <meta name="description" content="{{ page.description }}" />
     <meta name="keywords" content="{{ page.keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
-    <meta name="og:site_name" content="{{ site.title }}"/>
-    <meta name="og:type" content="article" />
-    <meta name="og:locale" content="en_US" />
+    <meta property="og:site_name" content="{{ site.title }}"/>
+    <meta property="og:type" content="article" />
+    <meta property="article:section" content="Programming"/>
+    <meta property='article:author' content='{{ site.url }}/about.html' />
+    <meta property='article:publisher' content='{{ site.url }}/about.html' />
+    <meta property="article:published_time" content="{{ page.date }}">
+    <meta property="og:locale" content="en_US" />
+    <meta property="profile:first_name" content="{{ site.author.first_name}}">
+    <meta property="profile:last_name" content="{{ site.author.last_name}}">
+    <meta property="profile:username" content="{{ site.author.username}}">
+    <meta property="profile:gender" content="{{ site.author.gender}}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ site.url }}{{ page.figure }}" />
+    <meta name="twitter:image" property="og:image" content="{{ site.url }}{{ page.figure }}" />
     <meta name="twitter:account_id" content="1022440692541517825" />
     <meta name="twitter:creator" content="@driver733"/>
     <meta name="twitter:site" content="@driver733"/>
