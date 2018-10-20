@@ -18,7 +18,9 @@ keywords:
       </a>
     </h1>
     {{ post.excerpt }}
-    <a href="{{ site.baseurl }}{{ post.url }}">Read...</a>
+    <a id="read" href="{{ site.baseurl }}{{ post.url }}" class="btn btn-outline-info" role="button">
+      Read <span class="fas fa-long-arrow-alt-right"></span>
+    </a>
   </article>
 {% endfor %}
 
