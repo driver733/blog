@@ -159,7 +159,8 @@ task ping: [:build] do
         data.code == '200' ||
         data.code == '301' ||
         data.code == '302' ||
-        data.code == '418'
+        data.code == '418' ||
+        data.code == '405'
   end
   done 'All links are valid'
 end

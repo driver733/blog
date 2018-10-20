@@ -43,25 +43,30 @@ layout: default
     <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
   </a>
 
-   <!--Reddit -->
+  <!--Reddit -->
   <a href="http://reddit.com/submit?url={{site.url}}{{page.url}}&amp;title={{ page.title | url_encode }}"
      target="_blank" title="Reddit">
     <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
   </a>
 
-   <!--LinkedIn -->
+  <!--LinkedIn -->
   <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{page.url}}"
      target="_blank" title="LinkedIn">
     <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
   </a>
 
-   <!--VK -->
+  <a href="https://news.ycombinator.com/submitlink?u={{site.url}}{{page.url}}&t={{ page.title | url_encode }}"
+     target="_blank" title="Hacker News">
+    <img class="btn-social-share" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjWKdVE9MBBLKSWROP_FR-MBEYM_YQ1-7MqoRwWnh8u9gCAJH3" alt="Hacker News" />
+  </a>
+
+  <!--VK -->
   <a href="http://vk.com/share.php?url={{site.url}}{{page.url}}"
      target="_blank" title="VK">
     <img src="https://simplesharebuttons.com/images/somacro/vk.png" alt="VK" />
   </a>
 
-   <!--Email-->
+  <!--Email-->
   <a href="mailto:?Subject={{ page.title | url_encode }}&amp;Body={{ page.title | url_encode }}%20{{ page.description | url_encode }}%0A{{site.url}}{{page.url}}"
      title="Email">
     <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
