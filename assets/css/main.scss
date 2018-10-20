@@ -104,25 +104,15 @@ header {
   margin-top: .5em;
 }
 
-.btn-share {
-  border-radius: 50%;
-  display: inline-block;
-  height: 40px;
-  overflow: hidden;
-  position: relative;
-  width: 40px;
-}
-
-.btn-share img {
-  display: inline-block;
-  margin: 0 auto;
-}
-
 .share-buttons {
   margin-left: -5px;
 }
 
-.btn-simple-share-icon {
+.circular {
+  border-radius: 50%;
+}
+
+.share-icon {
   display: inline-block;
   height: 40px;
   margin-left: 5px;
@@ -130,7 +120,6 @@ header {
   margin-top: .5em;
   width: 40px;
 }
-
 
 blockquote {
   background: $blockquote-background-color;

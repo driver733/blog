@@ -29,7 +29,10 @@ layout: default
   <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
   {{ page.excerpt }}
   <figure>
-    <img src="{{ page.figure }}" width="650" height="325">
+    <img src="{{ page.figure }}"
+         alt="{{ page.figalt }}"
+         width="650"
+         height="325">
     <figcaption>{{ page.figcaption }}</figcaption>
   </figure>
   {{ content | remove: page.excerpt }}
@@ -41,7 +44,7 @@ layout: default
      target="_blank"
      role="button"
      title="Twitter">
-    <img class="btn-simple-share-icon"
+    <img class="share-icon"
          src="https://simplesharebuttons.com/images/somacro/twitter.png"
          alt="Twitter"/>
   </a>
@@ -51,7 +54,7 @@ layout: default
      target="_blank"
      role="button"
      title="Facebook">
-    <img class="btn-simple-share-icon"
+    <img class="share-icon"
          src="https://simplesharebuttons.com/images/somacro/facebook.png"
          alt="Facebook"/>
   </a>
@@ -61,7 +64,7 @@ layout: default
      target="_blank"
      role="button"
      title="Reddit">
-    <img class="btn-simple-share-icon"
+    <img class="share-icon"
          src="https://simplesharebuttons.com/images/somacro/reddit.png"
          alt="Reddit"/>
   </a>
@@ -70,18 +73,20 @@ layout: default
   <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{page.url}}"
      target="_blank"
      role="button"
-     title="LinkedIn">
-    <img class="btn-simple-share-icon"
+     title="LinkedIn"
+     data-proofer-ignore>
+    <img class="share-icon"
          src="https://simplesharebuttons.com/images/somacro/linkedin.png"
          alt="LinkedIn"/>
   </a>
 
   <!--Hacker News-->
-  <a class="btn-share" href="https://news.ycombinator.com/submitlink?u={{site.url}}{{page.url}}&t={{ page.title | url_encode }}"
+  <a href="https://news.ycombinator.com/submitlink?u={{site.url}}{{page.url}}&t={{ page.title | url_encode }}"
      target="_blank"
      role="button"
-     title="Hacker News">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjWKdVE9MBBLKSWROP_FR-MBEYM_YQ1-7MqoRwWnh8u9gCAJH3" alt="Hacker News" />
+     title="Hacker News"
+     data-proofer-ignore>
+    <img class="share-icon circular" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjWKdVE9MBBLKSWROP_FR-MBEYM_YQ1-7MqoRwWnh8u9gCAJH3" alt="Hacker News" />
   </a>
 
   <!--VK -->
@@ -89,7 +94,7 @@ layout: default
      target="_blank"
      role="button"
      title="VK">
-    <img class="btn-simple-share-icon"
+    <img class="share-icon"
          src="https://simplesharebuttons.com/images/somacro/vk.png"
          alt="VK" />
   </a>
@@ -97,8 +102,9 @@ layout: default
   <!--Email-->
   <a href="mailto:?Subject={{ page.title | url_encode }}&amp;Body={{ page.title | url_encode }}%20{{ page.description | url_encode }}%0A{{site.url}}{{page.url}}"
      title="Email"
-     role="button">
-    <img class="btn-simple-share-icon"
+     role="button"
+     data-proofer-ignore>
+    <img class="share-icon"
          src="https://simplesharebuttons.com/images/somacro/email.png"
          alt="Email"/>
   </a>

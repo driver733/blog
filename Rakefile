@@ -19,13 +19,13 @@ task default: [
   :scss_lint,
   :pages,
   :garbage,
-  # :proofer,
+  :markdownlint,
+  :w3c,
+  :proofer,
   # :spell,
-  :ping,
   :orphans,
   :rubocop,
-  :markdownlint,
-  :w3c
+  # :ping
 ]
 
 def done(msg)

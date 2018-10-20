@@ -19,7 +19,8 @@ keywords:
     </h1>
     {{ post.excerpt }}
     <figure>
-      <img src="{{ post.figure }}">
+      <img src="{{ post.figure }}"
+           alt="{{ post.figalt }}">
       <figcaption>{{ post.figcaption }}</figcaption>
     </figure>
     <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-outline-info btn-read" role="button">
