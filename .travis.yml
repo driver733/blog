@@ -3,9 +3,6 @@ sudo: false
 rvm:
    - 2.3.3
 cache: bundler
-branches:
-  only:
-    - master
 addons:
   apt:
     packages:
