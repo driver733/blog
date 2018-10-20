@@ -19,13 +19,12 @@ task default: [
   :scss_lint,
   :pages,
   :garbage,
+  :orphans,
   :markdownlint,
+  :rubocop,
   :w3c,
   :proofer,
   # :spell,
-  :orphans,
-  :rubocop,
-  # :ping
 ]
 
 def done(msg)
@@ -141,28 +140,6 @@ task spell: [:build] do
     puts "#{f}: OK (#{text.split(/\s/).size} words)"
   end
   done 'No spelling errors'
-end
-
-desc 'Ping all foreign links'
-task ping: [:build] do
-  links = Dir['_site/**/*.html'].reduce([]) do |array, f|
-    array + Nokogiri::HTML(File.read(f)).xpath(
-      '//a/@href[starts-with(.,"http://") or starts-with(.,"https://")]'
-    ).to_a.map(&:to_s)
-  end.uniq
-  links.map { |u| URI.parse(u) }.each do |uri|
-    http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = true if uri.port == 443
-    data = http.head(uri.request_uri)
-    puts "#{uri}: #{data.code}"
-    raise "URI #{uri} is not OK" unless
-        data.code == '200' ||
-        data.code == '301' ||
-        data.code == '302' ||
-        data.code == '418' ||
-        data.code == '405'
-  end
-  done 'All links are valid'
 end
 
 desc 'Make sure there are no orphan articles'
