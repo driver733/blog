@@ -23,9 +23,6 @@ However, the application of these terms in OOP is yet to happen.
 
 <!--more-->
 
-<!--![]({{ page.image }})-->
-<!--*© Mikhail Yakushin*-->
-
 Let's start with a basic (conventionally [procedural]) example. Suppose you have been assigned a
 task that requires you to determine whether the last operator the
 user was chatting with is online. If the operator is online, you
