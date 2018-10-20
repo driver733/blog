@@ -2,6 +2,7 @@
 layout: post
 date: 2018-10-11
 title: "Information vs Data in OOP"
+image: /assets/images/posts/2018/10/information-vs-data/sat.jpg
 description: |
   What is data and what is information?
   What is the difference between them in programming?
@@ -21,7 +22,7 @@ However, the application of these terms in OOP is yet to happen.
 
 <!--more-->
 
-![](/assets/images/posts/2018/10/information-vs-data/sat.jpg)
+![]({{ page.image }})
 *© Mikhail Yakushin*
 
 Let's start with a basic (conventionally [procedural]) example. Suppose you have been assigned a

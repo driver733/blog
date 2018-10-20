@@ -2,6 +2,7 @@
 layout: post
 date: 2018-07-27
 title: "From procedures to objects - A practical example using JDK Properties"
+image: /assets/images/posts/2018/07/props-file/old-ibm-computer.jpg
 description: |
   What are the drawbacks of JDK Properties?
   What consequences do they have?
@@ -42,7 +43,7 @@ public void store(OutputStream out, String comments)
 
 Nevertheless, he accepts the solution and moves on with his project.
 
-![](/assets/images/posts/2018/07/props-file/old-ibm-computer.jpg)
+![]({{ page.image }})
 *© National Museum of Computing*
 
 
