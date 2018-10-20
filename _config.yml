@@ -10,7 +10,10 @@ kramdown:
   auto_ids: true
   syntax_highlighter: rouge
 author:
-  name: "Mikhail Yakushin"
+  first_name: "Mikhail"
+  last_name: "Yakushin"
+  username: "driver733"
+  gender: "male"
   email: yakushin@terpmail.umd.edu
 encoding: utf-8
 timezone: Europe/Moscow
