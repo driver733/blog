@@ -4,6 +4,7 @@ date: 2018-10-08
 title: "Entity and DTO: What's the difference?"
 figure: /assets/images/posts/2018/10/entity-vs-dto/mac-vs-pc.jpg
 figcaption: © Mac vs PC. Apple.
+figalt: Mac vs PC advertisement screenshot
 description: |
   What is an entity? What is a DTO?
   What is the actual difference between them?

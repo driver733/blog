@@ -4,6 +4,7 @@ date: 2018-10-11
 title: "Information vs Data in OOP"
 figure: /assets/images/posts/2018/10/information-vs-data/sat.jpg
 figcaption: © Mikhail Yakushin
+figalt: Data - &quot;Low SAT scores&quot;. Information - &quot;You won't get into the college of your choice&quot;
 description: |
   What is data and what is information?
   What is the difference between them in programming?
