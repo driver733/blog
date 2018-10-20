@@ -104,20 +104,30 @@ header {
   margin-top: .5em;
 }
 
-.btn-social-share {
+.btn-share {
   border-radius: 50%;
+  display: inline-block;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  width: 40px;
+}
+
+.btn-share img {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .share-buttons {
   margin-left: -5px;
 }
 
-.share-buttons img {
+.btn-simple-share-icon {
   display: inline-block;
+  height: 40px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: .5em;
-  vertical-align: middle;
   width: 40px;
 }
 
