@@ -13,18 +13,18 @@ require 'net/http'
 require 'html-proofer'
 require 'mdl'
 
-task default: [
-  :clean,
-  :build,
-  :scss_lint,
-  :pages,
-  :garbage,
-  :orphans,
-  :markdownlint,
-  :rubocop,
-  :w3c,
-  :proofer
-  # :spell
+task default: %i[
+  clean
+  build
+  scss_lint
+  pages
+  garbage
+  orphans
+  markdownlint
+  rubocop
+  spell
+  w3c
+  proofer
 ]
 
 def done(msg)
