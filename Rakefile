@@ -23,8 +23,8 @@ task default: [
   :markdownlint,
   :rubocop,
   :w3c,
-  :proofer,
-  # :spell,
+  :proofer
+  # :spell
 ]
 
 def done(msg)
