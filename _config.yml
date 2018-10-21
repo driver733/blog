@@ -1,6 +1,6 @@
-title: Mikhail (@driver733) Yakushin's blog
+title: Mikhail @driver733 Yakushin's blog
 email: yakushin@terpmail.umd.edu
-description: Personal blog of Mikhail (@driver733) Yakushin about programming.
+description: Personal blog of Mikhail @driver733 Yakushin about programming.
 url: "https://www.driver733.com"
 twitter_username: driver733
 github_username: driver733
@@ -24,7 +24,6 @@ exclude:
   - Gemfile
   - Rakefile
   - LICENSE.txt
-
 plugins:
   - jekyll-feed
   - jekyll-bits
@@ -33,17 +32,35 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-related-posts
-
 paginate: 8
 paginate_path: "p/:num"
 excerpt_separator: <!--more-->
-
 feed:
-  title: Mikhail (@driver733) Yakushin's blog
-  subtitle: My personal blog about programming
+  title: Mikhail @driver733 Yakushin's blog
+  subtitle: Personal blog of Mikhail @driver733 Yakushin about programming.
   path: rss.xml
-
 sass:
   style: compressed
   deploy_style: compressed
   compile_in_place: false
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      title: Mikhail @driver733 Yakushin's blog
+      description: Personal blog of Mikhail @driver733 Yakushin about programming.
+  -
+    scope:
+      path: "static"
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

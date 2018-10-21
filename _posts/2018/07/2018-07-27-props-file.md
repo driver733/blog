@@ -1,7 +1,6 @@
 ---
-layout: post
 date: 2018-07-27
-title: "From procedures to objects - A practical example using JDK Properties"
+title: From procedures to objects - A practical example using JDK Properties
 figure: /assets/images/posts/2018/07/props-file/old-ibm-computer.jpg
 figcaption: © National Museum of Computing
 figalt: Old IBM computer with two scientist reading its printed output.
