@@ -159,11 +159,11 @@ task orphans: [:build] do
     .group_by(&:itself).each { |k, v| counts[k] = v.length }
   orphans = 0
   counts.each do |k, v|
-    if (v - 1) < 1
-      puts "#{k} is an orphan (#{v - 1})"
+    if (v) < 2
+      puts "#{k} is an orphan (#{v})"
       orphans += 1
     else
-      puts "#{k}: #{v - 1}"
+      puts "#{k}: #{v}"
     end
   end
   raise "There are #{orphans} orphans" unless orphans.zero?
