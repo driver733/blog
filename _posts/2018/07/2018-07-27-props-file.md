@@ -188,4 +188,4 @@ thus, gives the following benefits over the standard Properties class:
 [controllers]:          https://www.yegor256.com/2016/12/13/mvc-vs-oop.html
 [Properties]:           https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html
 [Temporal coupling]:    https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html
-[manage]:               https://www.driver733.com/2018/10/08/entity-and-dto.html
+[manage]:               /2018/10/08/entity-and-dto.html

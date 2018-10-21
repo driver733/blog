@@ -144,26 +144,26 @@ end
 
 desc 'Make sure there are no orphan articles'
 task orphans: [:build] do
-  links = Dir['_site/**/*.html'].reduce([]) do |array, f|
+  links = Dir['_site/*/**/*.html'].reduce([]) do |array, f|
     array + Nokogiri::HTML(File.read(f)).xpath('//a/@href').to_a.map(&:to_s)
   end
   links = links
-          .map { |a| a.gsub(%r{/^\//}, 'https://www.driver733.com/') }
-          .select { |a| a.start_with? 'https://www.driver733.com/' }
+          .map { |a| a.gsub(%r{/^\//}, '/') }
+          .select { |a| a.start_with? '/20' }
           .map { |a| a.gsub(/#.*/, '') }
-  links += Dir['_site/**/*.html']
-           .map { |f| f.gsub(/_site/, 'https://www.driver733.com') }
+  links += Dir['_site/*/**/*.html']
+           .map { |f| f.gsub(/_site/, '') }
   counts = {}
   links
     .select { |a| a.match %r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*} }
     .group_by(&:itself).each { |k, v| counts[k] = v.length }
   orphans = 0
   counts.each do |k, v|
-    if v < 2
-      puts "#{k} is an orphan (#{v})"
+    if (v - 1) < 1
+      puts "#{k} is an orphan (#{v - 1})"
       orphans += 1
     else
-      puts "#{k}: #{v}"
+      puts "#{k}: #{v - 1}"
     end
   end
   raise "There are #{orphans} orphans" unless orphans.zero?

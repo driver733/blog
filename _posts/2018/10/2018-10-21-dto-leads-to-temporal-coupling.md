@@ -48,7 +48,7 @@ it sends the updated data to the database, by using a DAO instance, which extrac
 data fields from the *Student* DTO. What exactly is wrong here and why DTO is the one to blame?
 
 1. First of all, being nothing, but a plain data container, the *Student* **DTO is a dependent object**.
-Being able to provide *data*, but not *functionality* or *behaviour* (a combination of data and
+Being able to provide *data*, but not *functionality* or *behavior* (a combination of data and
 context) it loses independence as an [entity]. As a result, the *Student* DTO, just like any other DTO
 (read-only or not), requires a context before it can be used. The object which provides context is
 conventionally called *controller*.
@@ -69,10 +69,10 @@ and complexity** (due to the increased context, introduced by different DTOs) **
 as a consequence.
 
 
-[DTOs]: /2018/10/08/entity-and-dto.html
-[one my recent articles]: /2018/10/11/information-vs-data.html
-[asked]: http://disq.us/p/1wln4wi
-[Elegant Objects]: https://www.elegantobjects.org
-[controller]: https://www.yegor256.com/2016/12/13/mvc-vs-oop.html
-[entity]: /2018/10/08/entity-and-dto.html
-[setter]: https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html
+[DTOs]:                     /2018/10/08/entity-and-dto.html
+[one my recent articles]:   /2018/10/11/information-vs-data.html
+[asked]:                    http://disq.us/p/1wln4wi
+[Elegant Objects]:          https://www.elegantobjects.org
+[controller]:               https://www.yegor256.com/2016/12/13/mvc-vs-oop.html
+[entity]:                   /2018/10/08/entity-and-dto.html
+[setter]:                   https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html

@@ -188,12 +188,12 @@ and think what you are going to write will end up with something that can race o
 instance of the [Map] interface.
 
 
-[information]:              https://www.driver733.com/2018/10/11/information-vs-data.html
+[information]:              /2018/10/11/information-vs-data.html
 [Data Transfer Object]:     https://martinfowler.com/eaaCatalog/dataTransferObject.html
 [discussions]:              https://www.yegor256.com/2016/07/06/data-transfer-object.html
 [entity]:                   https://www.yegor256.com/2016/07/14/who-is-object.html
 [examples]:                 https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html
-[practical alternatives]:   https://www.driver733.com/2018/07/27/props-file.html
+[practical alternatives]:   /2018/07/27/props-file.html
 [blog]:                     https://www.amihaiemil.com/2017/09/01/data-should-be-animated-not-represented.html
 [Elegant Objects]:          https://www.elegantobjects.org
 [definition]:               https://en.wikipedia.org/wiki/Data_transfer_object

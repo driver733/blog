@@ -135,10 +135,10 @@ problems and your code will follow you.
 [ORM]:                          https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html
 [controller]:                   https://www.yegor256.com/2016/12/13/mvc-vs-oop.html
 [DAO]:                          https://www.yegor256.com/2017/12/05/data-access-object.html
-[DTO]:                          https://www.driver733.com/2018/10/08/entity-and-dto.html
-[procedural]:                   https://www.driver733.com/2018/07/27/props-file.html
-[blog post]:                    https://www.driver733.com/2018/10/08/entity-and-dto.html
-[entity]:                       https://www.driver733.com/2018/10/08/entity-and-dto.html
+[DTO]:                          /2018/10/08/entity-and-dto.html
+[procedural]:                   /2018/07/27/props-file.html
+[blog post]:                    /2018/10/08/entity-and-dto.html
+[entity]:                       /2018/10/08/entity-and-dto.html
 [cleaner and clearer]:          https://www.yegor256.com/2018/09/12/clear-code.html
-[temporal coupling]:            https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html
+[temporal coupling]:            /2018/10/21/dto-leads-to-temporal-coupling.html
 [improved maintainability]:     https://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html
