@@ -140,5 +140,5 @@ problems and your code will follow you.
 [blog post]:                    /2018/10/08/entity-and-dto.html
 [entity]:                       /2018/10/08/entity-and-dto.html
 [cleaner and clearer]:          https://www.yegor256.com/2018/09/12/clear-code.html
-[temporal coupling]:            /2018/10/21/dto-leads-to-temporal-coupling.html
+[temporal coupling]:            /2018/10/21/dtos-lead-to-temporal-coupling.html
 [improved maintainability]:     https://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html

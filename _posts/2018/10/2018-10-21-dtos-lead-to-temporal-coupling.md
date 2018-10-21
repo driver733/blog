@@ -1,7 +1,7 @@
 ---
 date: 2018-10-21
 title: How DTOs decrease maintainability by introducing temporal coupling?
-figure: /assets/images/posts/2018/10/dto-leads-to-temporal-coupling/similar-houses.jpg
+figure: /assets/images/posts/2018/10/dtos-lead-to-temporal-coupling/similar-houses.jpg
 figcaption: DTOs in practice. © writingfordesigners.com
 figalt: Many very similar houses placed close to each other
 description: |
