@@ -6,6 +6,7 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
 // scss-lint:disable MergeableSelector
+// scss-lint:disable ImportantRule
 
 $black: #000;
 
@@ -30,7 +31,7 @@ $blockquote-border-color: f9f9f9;
 .desktop-only { @extend %desktop-only; }
 
 a {
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 * {
