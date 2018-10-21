@@ -1,6 +1,6 @@
 ---
 date: 2018-10-11
-title: "Information vs Data in OOP"
+title: Information vs Data in OOP
 figure: /assets/images/posts/2018/10/information-vs-data/sat.jpg
 figcaption: © Mikhail Yakushin
 figalt: Data - &quot;Low SAT scores&quot;. Information - &quot;You won't get into the college of your choice&quot;
@@ -49,8 +49,6 @@ public final class HttpRequestHandler {
 }
 
 ```
-
-
 
 Let's for a minute forget about the fact that [DAO] and [DTO] have no place
 in OOP and focus on another aspect of the code above. All of the variables
@@ -143,5 +141,4 @@ problems and your code will follow you.
 [entity]:                       https://www.driver733.com/2018/10/08/entity-and-dto.html
 [cleaner and clearer]:          https://www.yegor256.com/2018/09/12/clear-code.html
 [temporal coupling]:            https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html
-
 [improved maintainability]:     https://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html

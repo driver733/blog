@@ -18,7 +18,7 @@ comments: true
 ---
 
 John is a newcomer to Java and has faced the need to save key-value pairs
-to a file. John reaches stackoverflow for help and find the JDK [Properties] class...
+to a file. He reaches stackoverflow for help and finds the JDK [Properties] class...
 
 <!--more-->
 
