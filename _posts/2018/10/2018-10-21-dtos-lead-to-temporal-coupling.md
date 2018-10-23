@@ -50,7 +50,7 @@ data fields from the *Student* DTO. What exactly is wrong here and why DTO is th
 1. First of all, being nothing, but a plain data container, the *Student* **DTO is a dependent object**.
 Being able to provide *data*, but not *functionality* or *behavior* (a combination of data and
 context) it loses independence as an [entity]. As a result, the *Student* DTO, just like any other **DTO
-(read-only or not), requires context before it can be used.** The object which provides context is
+(read-only or not), requires context** before it can be used. The object which provides context is
 conventionally called *controller*.
 
 2. Requiring *someone to act upon it*, due to its surrogate nature, **DTO becomes a utility
@@ -60,8 +60,8 @@ it needs to and then throws them away.
 
 3. The consequences of the procedural nature of the controller bring us
 back to the beginning of the article (The connection between DTOs and temporal coupling).
-**The more DTOs the controller works with, the more complex it becomes and the more lines of code it
-ends up having**.
+**The more DTOs the controller works with, the more complex it becomes** and the more lines of code it
+ends up having.
 
 By working with multiple data containers in one place, **a controller becomes a
 procedural block of code** that is intolerant to any changes, leading to **increased temporal coupling
