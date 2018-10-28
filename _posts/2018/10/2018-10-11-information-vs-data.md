@@ -72,7 +72,6 @@ which would provide us this *information*.
 public final class IsLastOperatorOnline implements Scalar<Boolean> {
 
     private final long user;
-
     private final Scalar<DataSource> database;
 
     public IsLastOperatorOnline(
@@ -84,17 +83,17 @@ public final class IsLastOperatorOnline implements Scalar<Boolean> {
     }
 
     public Boolean value() throws Exception {
-            final long count = new JdbcSession(
-                this.database.value()
-            ).sql(
-               // SELECT COUNT(*)
-               //
-               // WHERE status == 'online'
-            ).select(
-                new SingleOutcome<>(Long.class)
-            );
-            return count > 0;
-        }
+        final long count = new JdbcSession(
+            this.database.value()
+        ).sql(
+           // SELECT COUNT(*)
+           //
+           // WHERE status == 'online'
+        ).select(
+            new SingleOutcome<>(Long.class)
+        );
+        return count > 0;
+    }
 
 }
 
@@ -132,7 +131,7 @@ problems and your code will follow you.
 
 [big data]:                     https://en.wikipedia.org/wiki/Big_data
 [data mining]:                  https://en.wikipedia.org/wiki/Data_mining
-[ORM]:                          https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html
+[ORM]:                          /2018/10/28/orm-alternative.html
 [controller]:                   https://www.yegor256.com/2016/12/13/mvc-vs-oop.html
 [DAO]:                          https://www.yegor256.com/2017/12/05/data-access-object.html
 [DTO]:                          /2018/10/08/entity-and-dto.html

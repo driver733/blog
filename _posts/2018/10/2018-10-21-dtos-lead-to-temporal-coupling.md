@@ -35,7 +35,7 @@ As always, let's start with a short piece of code that demonstrates the topic of
     studentDao.updateStudent(student);
 
 ```
-*Courtesy of TutorialsPoint.com*
+*TutorialsPoint.com*
 
 This block of code shows a very typical way to use DTO in the context of DAO operations.
 At first sight, the ability to fetch data in a form of an object, update it, and then
