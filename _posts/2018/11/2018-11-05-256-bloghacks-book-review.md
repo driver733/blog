@@ -68,7 +68,7 @@ of the box (notice the "build failing" badge). If you ever
 need this kind of base for your blog, feel free to use [mine]. It is as a fork
 of the Yegor's demo blog with bug fixes, updates and improvements integrated.
 
-So, will I recommend this book? The answer is yes. Although it does not have any super-secrets,
+Will I recommend this book? The answer is yes. Although it does not have any super-secrets,
 it is succinct, tries to be honest with the reader and, overall, is a solid foundation for a new blogger.
 
 
