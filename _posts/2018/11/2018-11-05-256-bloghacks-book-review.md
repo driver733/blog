@@ -40,7 +40,7 @@ tips regarding the content of a blog. Yegor presents in detail how the posts sho
 formatted, what style to follow, what kinds of posts should be avoided and which ones
 should be posted more frequently that the others. What made me believe that the "hacks"
 are actually effective is that the author relates them back to his own blog. He shows that
-what he first thought to be effective, turned out to be a terrible mistake and vice-a-versa.
+what he first thought to be effective, turned out to be a terrible mistake and vice versa.
 This kind of argumentation is the driver of the book and something that makes
 the "hacks" credible.
 
