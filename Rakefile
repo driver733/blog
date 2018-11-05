@@ -159,7 +159,7 @@ task orphans: [:build] do
     .group_by(&:itself).each { |k, v| counts[k] = v.length }
   orphans = 0
   counts.each do |k, v|
-    if v < 2
+    if v.zero?
       puts "#{k} is an orphan (#{v})"
       orphans += 1
     else
