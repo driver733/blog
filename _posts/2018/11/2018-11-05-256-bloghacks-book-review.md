@@ -2,8 +2,8 @@
 date: 2018-11-05
 title: 256 Bloghacks and how to get them for free
 figure: /assets/images/posts/2018/11/256-bloghacks-book-review/256-bloghacks-book-cover.png
-figcaption: 256 Bloghacks © Yegor Bugayenko
-figalt: "256 Bloghacks - cover of the book"
+figcaption: \"256 Bloghacks\" © Yegor Bugayenko
+figalt: 256 Bloghacks - cover of the book
 description: |
   256 Bloghacks by Yegor Bugayenko - book review.
 keywords:

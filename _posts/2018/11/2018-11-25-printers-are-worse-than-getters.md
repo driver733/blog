@@ -1,6 +1,6 @@
 ---
 date: 2018-11-25
-title: "Printers are even worse than getters"
+title: Printers are even worse than getters
 figure: /assets/images/posts/2018/11/printers-are-worse-than-getters/viktor-chernomyrdin.jpg
 figcaption: "Viktor Chernomyrdin: \"We wanted the best, you know the rest\" © aif.ru"
 figalt: Viktor Chernomyrdin - the author of the quote We wanted the best, you know the rest
