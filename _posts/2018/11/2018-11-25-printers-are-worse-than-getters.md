@@ -79,20 +79,22 @@ public class BookById implements Book {
 	private final int id;
 
 	public BookById(final int id) {
-		this.id = id;
+	    this.id = id;
 	}
 
 	public String title() {
-		return this.resultSet().getString("title");
+	    return this.resultSet().getString("title");
 	}
 
 	public long isbn() {
-		return this.resultSet().getLong("isbn");
+	    return this.resultSet().getLong("isbn");
 	}
 
 	@Cacheable(forever = true)
 	private ResultSet resultSet() {
-		return new JdbcSession(database.value()).sql(
+	    return new JdbcSession(
+	        database.value()
+	    ).sql(
             DSL.select(
                 DSL.field("isbn"), DSL.field("title")
             ).from(
@@ -113,7 +115,7 @@ public class BookById implements Book {
                 );
             }
         );
-	}
+    }
 
 }
 ```
