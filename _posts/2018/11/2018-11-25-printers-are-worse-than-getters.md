@@ -4,8 +4,7 @@ title: Printers are even worse than getters
 figure: /assets/images/posts/2018/11/printers-are-worse-than-getters/viktor-chernomyrdin.jpg
 figcaption: "Viktor Chernomyrdin: \"We wanted the best, you know the rest\" © aif.ru"
 figalt: Viktor Chernomyrdin - the author of the quote We wanted the best, you know the rest
-description: |
-  Using printers for data access is even worse than accessor methods (getters).
+description: Using printers for data access is even worse than accessor methods (getters).
 keywords:
 - oop
 - getters
