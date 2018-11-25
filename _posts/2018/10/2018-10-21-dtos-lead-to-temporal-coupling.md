@@ -27,13 +27,11 @@ could be wrong with them?
 As always, let's start with a short piece of code that demonstrates the topic of discussion.
 
 ```java
-
     StudentDao studentDao = new StudentDaoImpl();
     //update student
     Student student = studentDao.getAllStudents().get(0);
     student.setName("Michael");
     studentDao.updateStudent(student);
-
 ```
 *TutorialsPoint.com*
 

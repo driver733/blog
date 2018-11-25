@@ -32,7 +32,6 @@ Your work project utilizes [ORM], so you decide to utilize the object mappers co
 available in your [controller]. You end up with code that looks something this.
 
 ```java
-
 public final class HttpRequestHandler {
 
     public Object responseForRequest(Request request) {
@@ -47,7 +46,6 @@ public final class HttpRequestHandler {
     }
 
 }
-
 ```
 
 Let's for a minute forget about the fact that [DAO] and [DTO] have no place
@@ -68,7 +66,6 @@ and *operator status* are pieces of data. As a result we need to create an [enti
 which would provide us this *information*.
 
 ```java
-
 public final class IsLastOperatorOnline implements Scalar<Boolean> {
 
     private final long user;
@@ -96,13 +93,11 @@ public final class IsLastOperatorOnline implements Scalar<Boolean> {
     }
 
 }
-
 ```
 
 With this implementation our http request handler changes to something like this.
 
 ```java
-
 public final class HttpRequestHandler {
 
     public Object responseForRequest(Request request) {
@@ -117,7 +112,6 @@ public final class HttpRequestHandler {
     }
 
 }
-
 ```
 
 Now that we working with information, rather than data, our code becomes [cleaner

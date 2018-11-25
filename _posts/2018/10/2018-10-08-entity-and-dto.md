@@ -34,7 +34,6 @@ process it, you decide to use a common approach - DTO.
 
 
 ```java
-
 // JSON received
 {
   "mark": "BMW",
@@ -55,7 +54,6 @@ public class Car {
 
   //getters and setters
 }
-
 ```
 
 Then you have discovered for yourself the idea of [Elegant Objects] and have decided to
@@ -63,7 +61,6 @@ improve your code and move away from DTOs by eliminating setters and by encapsul
 JSON and exposing it's contents through interface methods instead of getters.
 
 ```java
-
 public class JsonCar implements Car {
 
   private JsonObject car;
@@ -73,7 +70,6 @@ public class JsonCar implements Car {
   }
   //other accessor methods
 }
-
 ```
 
 In order to evaluate the refactored code in comparison to the original one (DTO) and in terms of
@@ -99,7 +95,6 @@ in time and in the right manner.
 You sure want to see the object we have been working with in a form of entity. Here it is.
 
 ```java
-
 public interface Car {
     void race();
 }
@@ -107,11 +102,9 @@ public interface Car {
 public interface Scalar<T> {
     T value();
 }
-
 ```
 
 ```java
-
 public class CarBasic implements Car {
 
     private final String mark;
@@ -133,12 +126,10 @@ public class CarBasic implements Car {
     }
 
 }
-
 ```
 
 
 ```java
-
 public class CarDb implements Scalar<Car> {
 
   private int id;
@@ -172,7 +163,6 @@ public class CarDb implements Scalar<Car> {
   }
 
 }
-
 ```
 
 Do you see the difference? Now our object is all about *responsibility* and *action*.

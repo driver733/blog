@@ -26,7 +26,6 @@ First, you need to fetch the users from the database table. I am using [jcabi-jd
 and [jooq] to create SQL queries. The *Connections* object is used to cache connections.
 
 ```java
-
 public final class Visitors implements Scalar<List<Scalar<XmppConnection>>> {
 
     private final Connections connections;
@@ -48,13 +47,11 @@ public final class Visitors implements Scalar<List<Scalar<XmppConnection>>> {
         );
     }
 }
-
 ```
 
 Next, you create a *Visitor* object for each user. This object creates a XMPP connection using the provided *User ID*.
 
 ```java
-
 public final class OutcomeListVisitor implements Outcome<List<Scalar<XmppConnection>>> {
 
     private final Connections connections;
@@ -77,13 +74,11 @@ public final class OutcomeListVisitor implements Outcome<List<Scalar<XmppConnect
         return result;
     }
 }
-
 ```
 
 The *Visitor* object uses the provided *Connections* to create a reusable XMPP connection for the user.
 
 ```java
-
 public final class Visitor implements Scalar<XmppConnection> {
 
     private final Connections connections;
@@ -94,7 +89,6 @@ public final class Visitor implements Scalar<XmppConnection> {
         );
     }
 }
-
 ```
 
 Looking over this example, the pervasive usage of ORM becomes questionable. The creation of each abstraction must
