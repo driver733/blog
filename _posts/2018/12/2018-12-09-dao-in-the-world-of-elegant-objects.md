@@ -1,5 +1,5 @@
 ---
-date: 2018-12-08
+date: 2018-12-09
 title: DAO in the world of Elegant Objects
 figure: /assets/images/posts/2018/12/dao-in-the-world-of-elegant-objects/dao-symbol.jpg
 figcaption: Dao (chinese philosophy) symbol © New World Encyclopedia
