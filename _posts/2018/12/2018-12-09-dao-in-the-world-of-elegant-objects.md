@@ -4,7 +4,7 @@ title: DAO in the world of Elegant Objects
 figure: /assets/images/posts/2018/12/dao-in-the-world-of-elegant-objects/dao-symbol.jpg
 figcaption: Dao (chinese philosophy) symbol © New World Encyclopedia
 figalt: Dao (chinese philosophy) symbol
-description:
+description: DAO implementation using SQL-speaking objects
 keywords:
 - oop
 - dao
