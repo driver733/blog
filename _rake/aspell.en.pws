@@ -1,5 +1,6 @@
 personal_ws-1.1 en 0
 Disqus
+POJO
 Yegor
 Yegor's
 sitemap
@@ -11,8 +12,11 @@ Yakushin
 OOP
 cactoos
 PropsFile
+analysing
 DTO
 DTOs
+pre-fetched
+pre
 stackoverflow
 JDK
 ORM
@@ -21,6 +25,7 @@ getters
 parsers
 deserialization
 accessors
+DAOs
 mutators
 serializers
 JSON
