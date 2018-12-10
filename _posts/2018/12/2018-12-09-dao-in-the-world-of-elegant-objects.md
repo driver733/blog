@@ -51,7 +51,7 @@ A collection of `Employee`s belonging to a specific department can be represente
 
 ```java
 interface Employees {
-    Collection<Employee> employees;
+    Collection<Employee> employees();
 }
 ```
 
@@ -173,7 +173,7 @@ final class EmployeesDb implements Employees {
         this.condition = condition;
     }
 
-    public Collection<Employee> resultSet() {
+    public Collection<Employee> employees() {
         return new JdbcSession(
             database.value()
         ).sql(
@@ -211,7 +211,7 @@ This is how we can use it to find all employees, which belong to the specific de
 
 ```java
 int departmentId = 1;
-Collection<Employee> employees = new EmployeesDb(departmentId);
+Collection<Employee> employees = new EmployeesDb(departmentId).employees();
 Employee employee = employees.iterator.next();
 String name = employee.name();
 ```
