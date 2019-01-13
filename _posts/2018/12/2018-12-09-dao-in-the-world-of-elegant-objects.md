@@ -218,7 +218,7 @@ String name = employee.name();
 
 A programmer who works with the `EmployeesDb` class receives `Employee`s
 in a form of the `Employee` interface. In reality, he is working with an `Employee`,
-which has all internal properties pre-fetched. However, in case the details of a
+which has all internal properties prefetched. However, in case the details of a
 foreign-key entity are needed, a request to the database will be made to retrieve them.
 This logic is implemented using the *[Decorator]* pattern.
 
@@ -264,7 +264,8 @@ standard DAO implementation in Java:
     getters and setters pollute the codebase and [introduce temporal coupling], since they have to be used to extract
     data from a DTO received from DAO, to create a new DTO and fill it with data or to
     alter the attributes of a DTO.
-2. **Abstractions over reference identifiers**
+
+2. **Abstractions over reference identifiers.**
 
     Instead of leaving the programmer with a *department_id* for
     him to figure out that he needs to have a `DepartmentDao`
