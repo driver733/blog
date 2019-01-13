@@ -15,7 +15,6 @@ PropsFile
 analysing
 DTO
 DTOs
-pre-fetched
 pre
 stackoverflow
 JDK
@@ -44,3 +43,8 @@ SEO
 DONTs
 accessor
 microservice
+TestContainers
+teardown
+DbUnit
+implementers
+prefetched
