@@ -104,8 +104,8 @@ concrete ones at the bottom, the reader will be able to understand the purpose
 of each unit and its place in the object composition: who it depends on as well
 as who depends on it. This is something that dependency-injection containers
 fail at: while they do fulfill the requirement to instantiate the dependencies
-and inject them where needed, they disintegrate [entities] from each other, in
-an attempt to setup an object-oriented application without using object
+and inject them where needed, they disintegrate [entities] from each other in an
+attempt to setup an object-oriented application without using object
 composition.
 
 [object composition]: https://en.wikipedia.org/wiki/Composition_over_inheritance
