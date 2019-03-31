@@ -4,7 +4,7 @@ title: Dependency injection containers vs object composition
 figure: /assets/images/posts/2019/03/dependency-injection-containers-vs-object-composition/matryoshka.jpg
 figcaption: © ruspeach.com
 figalt: A large set of Matryoshka dolls
-description: Can DI containers fully replace constructors in OOP? Absolutely, not!
+description: Can DI containers fully replace constructors in OOP? Absolutely not!
 keywords:
 - oop
 
