@@ -10,7 +10,7 @@
 
 $black: #000;
 
-$width: 650px;
+$width: 700px;
 $blockquote-background-color: f9f9f9;
 $blockquote-border-color: f9f9f9;
 
@@ -143,7 +143,7 @@ img {
   height: auto;
   margin-bottom: .5em;
   margin-top: 2em;
-  position: center;
+  max-height: 425px;
   width: 100%;
 }
 
