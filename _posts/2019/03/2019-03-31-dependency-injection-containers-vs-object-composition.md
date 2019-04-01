@@ -60,7 +60,7 @@ class UserDb {
  
     @Autowired
     @Qualifier("UserDatasource")
-    private final DataSource source; // injected instance from the global app context
+    private DataSource source; // injected instance from the global app context
     
     public User() {
     }
