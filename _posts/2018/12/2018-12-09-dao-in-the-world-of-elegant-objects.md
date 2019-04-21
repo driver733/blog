@@ -223,9 +223,9 @@ foreign-key entity are needed, a request to the database will be made to retriev
 This logic is implemented using the *[Decorator]* pattern.
 
 ```java
-final class EmployeeDbCached implements Employee {
+final class EmployeeCached implements Employee {
 
-    private final Employee employee;
+    private final Employee origin;
     private final int id;
     private final String name;
     private final Condition condition; // org.jooq.Condition
