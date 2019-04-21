@@ -44,11 +44,8 @@ this example.
 ```java
 // A DI container that creates the dependency
 class UserDatasource {
-    
     @Bean("UserDatasource")
-    public DataSource datasource() {
-    }
-    
+    public DataSource value() { /* ... */  }
 }
 ```
 
@@ -56,15 +53,12 @@ class UserDatasource {
 // The @Component annotation lets Spring know that this class needs
 // to have its dependencies injected on app start
 @Component 
-class UserDb {
- 
+class UserDao {
     @Autowired
     @Qualifier("UserDatasource")
-    private DataSource source; // injected instance from the global app context
-    
-    public User() {
-    }
-    
+    // injected instance from the global app context
+    private final DataSource source;
+    public UserDao() { this.source = source; }
 }
 ```
 
@@ -75,24 +69,52 @@ dependency-injection containers implementation objects stand aside from each
 other, relying on special classes - DI containers - to create the required
 dependencies and inject them into objects that depend on them.
 
-The diagrams below illustrate the differences between the dependency injection
-using containers and constructors, respectively.
+The code snippets below illustrate the difference between the dependency
+injection using constructors and containers, respectively.
 
-<div class="container">
-    <div class="row align-items-center">
-        <div class="col">
-            <img src="/assets/images/posts/2019/03/dependency-injection-containers-vs-object-composition/dependency-injection-container-diagram.jpg" alt="Dependency injection container diagram">
-        </div>
-        <div class="col">
-            <img src="/assets/images/posts/2019/03/dependency-injection-containers-vs-object-composition/object-composition-diagram.jpg" alt="Object composition diagram">
-        </div>
-    </div> 
-</div>
+```java
+// Dependency injection without DI containers
+public class Application {
+    public static void main(String[] args) {
+        new UserVerifyJob(
+            new BusinessService(
+                new UserService(
+                    new UserDao(
+                      new UserDataSource()
+                    )
+                )
+            )
+        ).run();
+    }
+}
+```
+```java
+// Dependency injection using DI containers
+@SpringBootApplication
+public class Application {
+    public static void main(String[] args) {
+      //   Spring recursively creates
+      //   all components (beans):
+      //
+      //   new UserVerifyJob(
+      //      new BusinessService( ↑ Injected ↑
+      //          new UserService( ↑ Injected ↑
+      //              new UserDao( ↑ Injected ↑
+      //                  new UserDataSource() ↑ Injected ↑
+      //              )
+      //          )
+      //      )
+      //   )
+      //
+      SpringApplication.run(Application.class, args);
+    }
+}
+```
 
 As you can see, the constructor-based implementation forms a hierarchy of
 abstractions, a composition of objects, which serves as a path for dependencies
 to reach the low-level classes. The dependency-injection container, on the other
-hand, treats objects as standalone structures, which are not explicitly
+hand, treats objects as standalone structures, which are not *explicitly*
 connected through the means of compositional arrangement.
  
 I strongly believe that constructors are still preferable to the DI containers.
