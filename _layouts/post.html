@@ -20,13 +20,23 @@ layout: default
       <!--<meta itemprop="width" content="250"/>-->
     <!--</div>-->
   </div>
-  <p>
-    <time
-        itemprop="datePublished dateModified"
-        datetime="{{ page.date | date_to_xmlschema }}">
-      {{ page.date | date: "%B %-d, %Y" }}
-    </time>
-  </p>
+
+
+    <div class="inline-element-first">
+        <time
+            itemprop="datePublished dateModified"
+            datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+    </div>
+    <div class="inline-element">
+      <a href="{{ site.url }}{{ page.url }}#disqus_thread" itemprop="discussionUrl" class="a-black">comments</a>
+    </div>
+
+
+
+
+  </div>
   <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
   {{ page.excerpt }}
   <figure>
