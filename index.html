@@ -7,7 +7,7 @@ keywords:
 {% for post in paginator.posts %}
   <article class="article-preview">
     {{ post.date | date: "%B %-d, %Y" }}
-    <a href="{{ site.url }}{{ post.url }}#disqus_thread" itemprop="discussionUrl" class="inline-element a-black">comments</a>
+    <a href="{{ site.url }}{{ post.url }}#disqus_thread" class="inline-element a-black">comments</a>
     <h1>
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
