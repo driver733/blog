@@ -157,6 +157,20 @@ img + em {
   margin-bottom: 3em;
 }
 
+.inline-element-first {
+  display: inline-block;
+}
+
+.inline-element {
+  display: inline-block;
+  margin-left: 2em;
+}
+
+.a-black {
+  color: $black;
+  font-size: 1em;
+}
+
 article {
   margin-bottom: 4em;
   margin-top: 2em;
