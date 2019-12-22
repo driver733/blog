@@ -1,0 +1,55 @@
+version: 2
+
+references:
+  default_docker_ruby_executor: &default_docker_ruby_executor
+    image: circleci/ruby:2.6.3
+    environment:
+      BUNDLE_JOBS: 3
+      BUNDLE_RETRY: 3
+      BUNDLE_PATH: vendor/bundle
+
+jobs:
+  build:
+    docker:
+      - *default_docker_ruby_executor
+    steps:
+      - checkout
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - restore_cache:
+          keys:
+            - blog-bundle-{{ checksum "Gemfile.lock" }}
+            - blog-bundle-
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      - save_cache:
+          key: blog-bundle-{{ checksum "Gemfile.lock" }}
+          #  paths:
+          #    - vendor/bundle
+    test:
+      parallelism: 3
+      docker:
+        - *default_docker_ruby_executor
+      steps:
+        - checkout
+        - restore_cache:
+            keys:
+              - blog-bundle-{{ checksum "Gemfile.lock" }}
+              - blog-bundle-
+        - run:
+            name: Bundle Install
+            command: bundle check || bundle install
+        - run:
+            name: Rake
+            command: rake
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
