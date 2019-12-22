@@ -1,5 +1,5 @@
 title: Mikhail @driver733 Yakushin's blog
-email: yakushin@terpmail.umd.edu
+email: driver733@gmail.com
 description: Personal blog of Mikhail @driver733 Yakushin about programming.
 url: "https://www.driver733.com"
 twitter_username: driver733
@@ -14,7 +14,7 @@ author:
   last_name: "Yakushin"
   username: "driver733"
   gender: "male"
-  email: yakushin@terpmail.umd.edu
+  email: driver733@gmail.com
 encoding: utf-8
 timezone: Europe/Moscow
 permalink: :year/:month/:day/:title.html
@@ -24,6 +24,11 @@ exclude:
   - Gemfile
   - Rakefile
   - LICENSE.txt
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 plugins:
   - jekyll-feed
   - jekyll-bits
