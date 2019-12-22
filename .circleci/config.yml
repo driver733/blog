@@ -19,31 +19,31 @@ jobs:
           command: bundle -v
       - restore_cache:
           keys:
-            - blog-bundle-{{ checksum "Gemfile.lock" }}
+            - blog-bundle-{{ checksum "Gemfile" }}
             - blog-bundle-
       - run:
           name: Bundle Install
           command: bundle check || bundle install
       - save_cache:
-          key: blog-bundle-{{ checksum "Gemfile.lock" }}
-          #  paths:
-          #    - vendor/bundle
-    test:
-      parallelism: 3
-      docker:
-        - *default_docker_ruby_executor
-      steps:
-        - checkout
-        - restore_cache:
-            keys:
-              - blog-bundle-{{ checksum "Gemfile.lock" }}
-              - blog-bundle-
-        - run:
-            name: Bundle Install
-            command: bundle check || bundle install
-        - run:
-            name: Rake
-            command: rake
+          key: blog-bundle-{{ checksum "Gemfile" }}
+          paths:
+            - vendor/bundle
+  test:
+    parallelism: 3
+    docker:
+      - *default_docker_ruby_executor
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - blog-bundle-{{ checksum "Gemfile" }}
+            - blog-bundle-
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      - run:
+          name: Rake
+          command: bundle exec rake
 
 workflows:
   version: 2
