@@ -7,7 +7,7 @@ ruby '2.6.3'
 
 gem 'github-pages', '203', group: :jekyll_plugins
 gem 'html-proofer', '3.15.0'
-gem 'mdl', '0.5.0'
+gem 'mdl', '0.6.0'
 gem 'pygments.rb', '1.2.1'
 gem 'rake', '12.3.3'
 gem 'rubocop', '0.78.0'
