@@ -7,7 +7,7 @@ gem 'github-pages', '203', group: :jekyll_plugins
 gem 'html-proofer', '3.15.0'
 gem 'mdl', '0.6.0'
 gem 'pygments.rb', '1.2.1'
-gem 'rake', '12.3.3'
+gem 'rake', '13.0.1'
 gem 'rubocop', '0.78.0'
 gem 'rubocop-rspec', '1.37.1'
 gem 'scss_lint', '0.59.0'
