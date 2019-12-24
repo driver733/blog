@@ -3,6 +3,8 @@
 
 [![Build Status](https://travis-ci.com/driver733/blog.svg)](https://travis-ci.com/driver733/blog)
 
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=driver733/kotlin-vs-java)](https://dependabot.com)
+
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/driver733/blog/blob/master/LICENSE.txt)
 
 Web page: [https://www.driver733.com](https://www.driver733.com)
