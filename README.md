@@ -5,4 +5,4 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/driver733/blog/blob/master/LICENSE.txt)
 
-Webpage: [https://www.driver733.com](https://www.driver733.com)
+Web page: [https://www.driver733.com](https://www.driver733.com)
