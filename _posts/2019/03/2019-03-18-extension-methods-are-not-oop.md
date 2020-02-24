@@ -15,7 +15,7 @@ comments: true
 [Extension method] is a special language feature introduced by Kotlin, Swift and
 other programming languages, which allows developers to add new methods to
 otherwise unchangeable classes. While at first it seems like a great idea, in
-reality it contradicts core OOP concepts and ideas.
+reality it contradicts the core OOP concepts and ideas.
 
 <!--more-->
 
