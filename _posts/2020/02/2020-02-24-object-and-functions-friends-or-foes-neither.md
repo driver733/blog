@@ -13,7 +13,7 @@ comments: true
 ---
 
 Programmers often view [object-oriented] and [functional programming] as two completely different paradigms. As a result,
-some developers advocate for one them, pointing out the advantages of their favourite paradigm and criticizing the
+some developers advocate for one them, pointing out the advantages of their favorite paradigm and criticizing the
 "opposing" one. However, I have rarely seen anyone *comparing* OOP with functional programming instead of
 *contrasting* them.
 
