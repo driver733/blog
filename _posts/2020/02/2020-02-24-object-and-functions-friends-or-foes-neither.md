@@ -85,8 +85,3 @@ see if what you come up with can *compare* to the code snippets in this article.
 [object-oriented]: https://en.wikipedia.org/wiki/Object-oriented_programming
 [solution]: https://www.yegor256.com/2015/02/26/composable-decorators.html
 [objects]: /2018/07/27/props-file.html
-
-[utility classes]: https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html
-[reducing scope]: https://www.yegor256.com/2019/03/12/data-and-maintainability.html
-[fully encapsulated]: https://g4s8.github.io/fully-encapsulated/
-
