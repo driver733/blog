@@ -1,7 +1,6 @@
-[![DevOps By Rultor.com](http://www.rultor.com/b/driver733/blog)](http://www.rultor.com/p/driver733/blog)
 [![We recommend IntelliJ IDEA](http://www.elegantobjects.org/intellij-idea.svg)](https://www.jetbrains.com/idea/)
 
-[![Build Status](https://travis-ci.com/driver733/blog.svg)](https://travis-ci.com/driver733/blog)
+![Build](https://github.com/driver733/blog/workflows/Build/badge.svg?branch=master)
 
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=driver733/blog)](https://dependabot.com)
 
