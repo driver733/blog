@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '2.6.3'
+ruby '2.7.1'
 
 gem 'github-pages', '204', group: :jekyll_plugins
 gem 'html-proofer', '3.15.2'

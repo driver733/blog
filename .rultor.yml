@@ -1,9 +1,0 @@
-docker:
-  image: yegor256/blog
-
-install: |
-  export GEM_HOME=~/.ruby
-  export GEM_PATH=$GEM_HOME:$GEM_PATH
-  export LC_ALL=en_US.UTF-8
-  bundle install
-  rake
