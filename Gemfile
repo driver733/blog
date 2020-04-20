@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '2.7.1'
 
 gem 'github-pages', '204', group: :jekyll_plugins
-gem 'html-proofer', '3.15.2'
+gem 'html-proofer', '3.15.3'
 gem 'mdl', '0.6.0'
 gem 'pygments.rb', '1.2.1'
 gem 'rake', '13.0.1'
