@@ -1,5 +1,5 @@
 ---
-date: 2020-07-16
+date: 2020-08-20
 title: "Testing Gradle precompiled script plugins"
 figure: /assets/images/posts/2020/08/20/how-to-write-tests-for-gradle-precompiled-script-plugins/gradle-kotlin.png
 figcaption: © JetBrains Blog
