@@ -1,7 +1,7 @@
 ---
 date: 2020-04-17
 title: "How to write and publish Gradle precompiled script plugins"
-figure: /assets/images/posts/2020/writing-and-releasing-gradle-plugins-with-kotlin-precompiled-scripts/gradle-kotlin.png
+figure: /assets/images/posts/2020/04/17/writing-and-releasing-gradle-plugins-with-kotlin-precompiled-scripts/gradle-kotlin.png
 figcaption: © Chirag Kunder
 figalt: Gradle and Kotlin
 description: In this article I will walk you through on how to create a precompiled script plugin and publish it on the Gradle Plugins portal.

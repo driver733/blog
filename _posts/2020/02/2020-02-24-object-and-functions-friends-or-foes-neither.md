@@ -1,7 +1,7 @@
 ---
 date: 2020-02-24
 title: "Objects and functions - friends or foes? Neither!"
-figure: /assets/images/posts/2020/object-and-functions-friends-or-foes-neither/Functional-Programming-vs-OOP.png
+figure: /assets/images/posts/2020/02/24/object-and-functions-friends-or-foes-neither/Functional-Programming-vs-OOP.png
 figcaption: © educba.com
 figalt: Functional programming vs OOP
 description: OOP and functional programming are often contrasted, but maybe they should be compared instead?
