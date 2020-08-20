@@ -1,7 +1,7 @@
 ---
 date: 2020-08-20
 title: "Testing Gradle precompiled script plugins"
-figure: /assets/images/posts/2020/08/20/how-to-write-tests-for-gradle-precompiled-script-plugins/gradle-kotlin.png
+figure: /assets/images/posts/2020/08/20/testing-gradle-precompiled-script-plugins/gradle-kotlin.png
 figcaption: © JetBrains Blog
 figalt: Gradle and Kotlin
 description: A guild for writing integration tests for Gradle precompiled script plugins written in Kotlin.
@@ -86,11 +86,13 @@ val buildResult = GradleRunner.create()
     .build()
 ```
 
-The build result allows us to check the outcome of each task that was executed
+The build result allows us to check the outcome of each task that was executed:
+
 ```kotlin
 buildResult.task("build")?.outcome shouldBe TaskOutcome.SUCCESS        
 ```
-as well as the output of the build:
+
+As well as the output of the build:
 ```kotlin
 output.contains("BUILD SUCCESSFUL")
 ```
